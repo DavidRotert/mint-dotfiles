@@ -1,0 +1,49 @@
+[global_config]
+  inactive_color_offset = 1.0
+[keybindings]
+[profiles]
+  [[default]]
+    background_darkness = 0.85
+    cursor_fg_color = "#000000"
+    cursor_bg_color = "#f6f5f4"
+    font = JetBrains Mono NL 10
+    foreground_color = "#f6f5f4"
+    scrollback_lines = 1000
+    palette = "#000000:#ed333b:#00cd00:#ffeb2e:#37a0ff:#c061cb:#00d7d7:#aaaaaa:#555555:#f66151:#55ff55:#ffff55:#65daff:#ff55ff:#55ffff:#ffffff"
+    use_custom_command = True
+    custom_command = zsh
+    use_system_font = False
+    title_hide_sizetext = True
+    title_transmit_fg_color = "#000000"
+    title_transmit_bg_color = "#c0bfbc"
+    title_receive_fg_color = "#a51d2d"
+    title_receive_bg_color = "#c0bfbc"
+    title_inactive_bg_color = "#9a9996"
+  [[danger]]
+    background_color = "#3f070d"
+    background_darkness = 1.0
+    cursor_fg_color = "#000000"
+    cursor_bg_color = "#f6f5f4"
+    font = JetBrains Mono NL 10
+    foreground_color = "#f6f5f4"
+    scrollback_lines = 1000
+    palette = "#000000:#ed333b:#00cd00:#ffeb2e:#37a0ff:#c061cb:#00d7d7:#aaaaaa:#555555:#f66151:#55ff55:#ffff55:#65daff:#ff55ff:#55ffff:#ffffff"
+    use_custom_command = True
+    custom_command = zsh
+    use_system_font = False
+    title_hide_sizetext = True
+    title_transmit_fg_color = "#000000"
+    title_transmit_bg_color = "#c0bfbc"
+    title_receive_fg_color = "#a51d2d"
+    title_receive_bg_color = "#c0bfbc"
+    title_inactive_bg_color = "#9a9996"
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+[plugins]

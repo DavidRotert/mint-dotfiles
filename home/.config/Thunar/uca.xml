@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>Terminal</icon>
+	<name>Im Terminal öffnen</name>
+	<submenu></submenu>
+	<unique-id>1699624934163762-1</unique-id>
+	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<description>Terminal im gewähltem Ordner öffnen</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>folder</icon>
+	<name>Als Systemverwalter öffnen</name>
+	<submenu></submenu>
+	<unique-id>1699624934163957-2</unique-id>
+	<command>pkexec thunar %F</command>
+	<description>Ordner mit Administratorrechten öffnen</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>emblem-symbolic-link</icon>
+	<name>Verknüpfung anlegen</name>
+	<submenu></submenu>
+	<unique-id>1699624934164150-3</unique-id>
+	<command>ln -s %f  &apos;Link to %n&apos;</command>
+	<description>Eine symbolische Verknüpfung für jedes gewählte Objekt anlegen</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+	<other-files/>
+</action>
+<action>
+	<icon>gnome-run</icon>
+	<name>Check SHA256</name>
+	<submenu></submenu>
+	<unique-id>1699624934164180-4</unique-id>
+	<command>mint-sha256sum %f</command>
+	<description>Computes SHA256 checksum for the selected file.</description>
+	<range></range>
+	<patterns>*.iso;*.ISO</patterns>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>gtk-find</icon>
+	<name>Suchen</name>
+	<submenu></submenu>
+	<unique-id>1699624934164406-5</unique-id>
+	<command>catfish %f</command>
+	<description>Nach Dateien suchen</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>visual-studio-code</icon>
+	<name>Open in VS Code</name>
+	<submenu></submenu>
+	<unique-id>1367866030392883-3</unique-id>
+	<command>code %f</command>
+	<description>Open folder or file in VS Code</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+	<text-files/>
+</action>
+<action>
+	<icon>git</icon>
+	<name>Git GUI</name>
+	<submenu></submenu>
+	<unique-id>1671274155139573-1</unique-id>
+	<command>git gui</command>
+	<description>Open with Git GUI</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>accessories-text-editor</icon>
+	<name>Edit as Root</name>
+	<submenu></submenu>
+	<unique-id>1577899023296129-1</unique-id>
+	<command>pkexec xed %f</command>
+	<description>Edit file as root</description>
+	<range></range>
+	<patterns>*</patterns>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon>run-build</icon>
+	<name>Run Script</name>
+	<submenu></submenu>
+	<unique-id>1638032880110598-1</unique-id>
+	<command>exo-open --launch TerminalEmulator --working-directory=%d --execute sh -c &apos;echo -n &quot;&quot;; ./%n; echo -n Press enter to exit ...; read keypress&apos;</command>
+	<description>Run script in terminal</description>
+	<range></range>
+	<patterns>*.sh</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>run-build</icon>
+	<name>Run Script (Root)</name>
+	<submenu></submenu>
+	<unique-id>1638032880110599-1</unique-id>
+	<command>exo-open --launch TerminalEmulator --working-directory=%d --execute sh -c &apos;echo -n &quot;&quot;; sudo ./%n; echo -n Press enter to exit ...; read keypress&apos;</command>
+	<description>Run script as root in terminal</description>
+	<range></range>
+	<patterns>*.sh</patterns>
+	<other-files/>
+</action>
+</actions>

@@ -1,0 +1,6 @@
+# Added by Toolbox App
+export PATH="$PATH:/home/david/.local/share/JetBrains/Toolbox/scripts"
+
+export SSH_AUTH_SOCK="/run/user/$UID/keyring/ssh"
+
+export QT_QPA_PLATFORMTHEME="qt6ct"
