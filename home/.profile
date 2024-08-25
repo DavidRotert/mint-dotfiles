@@ -8,30 +8,33 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-[ -f "$HOME/.oh-my-shells/shared/env" ] && . "$HOME/.oh-my-shells/shared/env"
-[ -f "$HOME/.oh-my-shells/shared/env_custom" ] && . "$HOME/.oh-my-shells/shared/env_custom"
-[ -f "$HOME/.oh-my-shells/shared/aliases" ] && . "$HOME/.oh-my-shells/shared/aliases"
-[ -f "$HOME/.oh-my-shells/shared/aliases_custom" ] && . "$HOME/.oh-my-shells/shared/aliases_custom"
-
-# colored GCC warnings and errors
-export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-export EDITOR="/usr/bin/nano"
-
 # if running bash
-if [ -n "$BASH_VERSION" ]; then
+if [ -n "$BASH_VERSION" ]
+then
     # include .bashrc if it exists
-    if [ -f "$HOME/.bashrc" ]; then
+    if [ -f "$HOME/.bashrc" ]
+    then
         . "$HOME/.bashrc"
     fi
 fi
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
+if [ -d "$HOME/bin" ]
+then
     PATH="$HOME/bin:$PATH"
 fi
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ] ; then
+if [ -d "$HOME/.local/bin" ]
+then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+source_if_exists() {
+    [ -f "$1" ] && . "$1"
+}
+
+source_if_exists "$HOME/.environment"
+source_if_exists "$HOME/.environment_custom"
+source_if_exists "$HOME/.aliases"
+source_if_exists "$HOME/.aliases_custom"

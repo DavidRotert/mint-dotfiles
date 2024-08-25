@@ -273,6 +273,7 @@
       <property name="favorites" type="array">
       </property>
       <property name="recent" type="array">
+        <value type="string" value="xfce-settings-manager.desktop"/>
         <value type="string" value="org.gnome.Firmware.desktop"/>
         <value type="string" value="uget-gtk.desktop"/>
         <value type="string" value="jetbrains-fleet-162c6744-44fe-4133-8106-af85796cbaee.desktop"/>
@@ -282,7 +283,6 @@
         <value type="string" value="nvim.desktop"/>
         <value type="string" value="mintinstall.desktop"/>
         <value type="string" value="transmission-gtk.desktop"/>
-        <value type="string" value="xfce4-screenshooter.desktop"/>
       </property>
     </property>
     <property name="plugin-14" type="string" value="notification-plugin"/>

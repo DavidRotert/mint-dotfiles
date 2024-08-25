@@ -4,30 +4,30 @@
   <property name="backdrop" type="empty">
     <property name="screen0" type="empty">
       <property name="monitor0" type="empty">
-        <property name="image-path" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-725e86a19adc92b79acb1c46298b0aca.jpg"/>
-        <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-725e86a19adc92b79acb1c46298b0aca.jpg"/>
+        <property name="image-path" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-fca9824aacfe7d12d228f7121d8512e0.jpg"/>
+        <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-fca9824aacfe7d12d228f7121d8512e0.jpg"/>
         <property name="last-single-image" type="empty"/>
         <property name="brightness" type="empty"/>
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-725e86a19adc92b79acb1c46298b0aca.jpg"/>
+          <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-fca9824aacfe7d12d228f7121d8512e0.jpg"/>
         </property>
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-725e86a19adc92b79acb1c46298b0aca.jpg"/>
+          <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-fca9824aacfe7d12d228f7121d8512e0.jpg"/>
         </property>
       </property>
       <property name="monitor1" type="empty">
-        <property name="image-path" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-725e86a19adc92b79acb1c46298b0aca.jpg"/>
-        <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-725e86a19adc92b79acb1c46298b0aca.jpg"/>
+        <property name="image-path" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-fca9824aacfe7d12d228f7121d8512e0.jpg"/>
+        <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-fca9824aacfe7d12d228f7121d8512e0.jpg"/>
         <property name="last-single-image" type="empty"/>
         <property name="brightness" type="empty"/>
       </property>
       <property name="monitor2" type="empty">
-        <property name="image-path" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-725e86a19adc92b79acb1c46298b0aca.jpg"/>
-        <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-725e86a19adc92b79acb1c46298b0aca.jpg"/>
+        <property name="image-path" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-fca9824aacfe7d12d228f7121d8512e0.jpg"/>
+        <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-fca9824aacfe7d12d228f7121d8512e0.jpg"/>
         <property name="last-single-image" type="empty"/>
         <property name="brightness" type="empty"/>
       </property>
@@ -35,68 +35,68 @@
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-725e86a19adc92b79acb1c46298b0aca.jpg"/>
+          <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-fca9824aacfe7d12d228f7121d8512e0.jpg"/>
         </property>
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-725e86a19adc92b79acb1c46298b0aca.jpg"/>
+          <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-fca9824aacfe7d12d228f7121d8512e0.jpg"/>
         </property>
         <property name="workspace2" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-725e86a19adc92b79acb1c46298b0aca.jpg"/>
+          <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-fca9824aacfe7d12d228f7121d8512e0.jpg"/>
         </property>
         <property name="workspace3" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-725e86a19adc92b79acb1c46298b0aca.jpg"/>
+          <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-fca9824aacfe7d12d228f7121d8512e0.jpg"/>
         </property>
       </property>
       <property name="monitorDP-1-2" type="empty">
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-725e86a19adc92b79acb1c46298b0aca.jpg"/>
+          <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-fca9824aacfe7d12d228f7121d8512e0.jpg"/>
         </property>
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-725e86a19adc92b79acb1c46298b0aca.jpg"/>
+          <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-fca9824aacfe7d12d228f7121d8512e0.jpg"/>
         </property>
         <property name="workspace2" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-725e86a19adc92b79acb1c46298b0aca.jpg"/>
+          <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-fca9824aacfe7d12d228f7121d8512e0.jpg"/>
         </property>
         <property name="workspace3" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-725e86a19adc92b79acb1c46298b0aca.jpg"/>
+          <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-fca9824aacfe7d12d228f7121d8512e0.jpg"/>
         </property>
       </property>
       <property name="monitorDP-1-1" type="empty">
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-725e86a19adc92b79acb1c46298b0aca.jpg"/>
+          <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-fca9824aacfe7d12d228f7121d8512e0.jpg"/>
         </property>
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-725e86a19adc92b79acb1c46298b0aca.jpg"/>
+          <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-fca9824aacfe7d12d228f7121d8512e0.jpg"/>
         </property>
       </property>
       <property name="monitorHDMI-1" type="empty">
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-725e86a19adc92b79acb1c46298b0aca.jpg"/>
+          <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-fca9824aacfe7d12d228f7121d8512e0.jpg"/>
         </property>
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-725e86a19adc92b79acb1c46298b0aca.jpg"/>
+          <property name="last-image" type="string" value="/home/david/.config/variety/wallpaper/wallpaper-auto-rotated-fca9824aacfe7d12d228f7121d8512e0.jpg"/>
         </property>
       </property>
     </property>
