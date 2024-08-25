@@ -102,6 +102,7 @@
       <property name="hide-new-items" type="bool" value="false"/>
       <property name="icon-size" type="int" value="0"/>
       <property name="known-items" type="array">
+        <value type="string" value="psensor"/>
         <value type="string" value="transmission-gtk"/>
         <value type="string" value="SimpleScreenRecorder"/>
         <value type="string" value="Webex"/>
@@ -273,6 +274,7 @@
       <property name="favorites" type="array">
       </property>
       <property name="recent" type="array">
+        <value type="string" value="thunar.desktop"/>
         <value type="string" value="xfce-settings-manager.desktop"/>
         <value type="string" value="org.gnome.Firmware.desktop"/>
         <value type="string" value="uget-gtk.desktop"/>
@@ -282,7 +284,6 @@
         <value type="string" value="gscriptor.desktop"/>
         <value type="string" value="nvim.desktop"/>
         <value type="string" value="mintinstall.desktop"/>
-        <value type="string" value="transmission-gtk.desktop"/>
       </property>
     </property>
     <property name="plugin-14" type="string" value="notification-plugin"/>
