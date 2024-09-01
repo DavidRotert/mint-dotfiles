@@ -19,7 +19,7 @@
     <property name="double_click_time" type="empty"/>
     <property name="double_click_distance" type="empty"/>
     <property name="double_click_action" type="empty"/>
-    <property name="easy_click" type="empty"/>
+    <property name="easy_click" type="string" value="Super"/>
     <property name="focus_hint" type="empty"/>
     <property name="focus_new" type="empty"/>
     <property name="frame_opacity" type="empty"/>

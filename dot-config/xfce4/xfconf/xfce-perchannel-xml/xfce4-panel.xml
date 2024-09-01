@@ -24,15 +24,16 @@
         <value type="int" value="2"/>
       </property>
       <property name="output-name" type="string" value="Primary"/>
+      <property name="autohide-behavior" type="uint" value="0"/>
     </property>
     <property name="dark-mode" type="bool" value="false"/>
     <property name="panel-0" type="empty">
       <property name="autohide-behavior" type="uint" value="0"/>
       <property name="background-rgba" type="array">
+        <value type="double" value="0.90980392156862744"/>
+        <value type="double" value="0.90980392156862744"/>
+        <value type="double" value="0.90980392156862744"/>
         <value type="double" value="1"/>
-        <value type="double" value="1"/>
-        <value type="double" value="1"/>
-        <value type="double" value="0.54964500000000005"/>
       </property>
       <property name="background-style" type="uint" value="0"/>
       <property name="enable-struts" type="bool" value="true"/>
@@ -238,7 +239,7 @@
       <property name="names-visible" type="empty"/>
       <property name="show-frame" type="empty"/>
       <property name="items" type="array">
-        <value type="string" value="16996310801.desktop"/>
+        <value type="string" value="17251812092.desktop"/>
       </property>
     </property>
     <property name="plugin-9" type="string" value="pulseaudio">
@@ -266,7 +267,7 @@
       <property name="digital-layout" type="empty"/>
       <property name="digital-date-font" type="empty"/>
       <property name="digital-time-font" type="empty"/>
-      <property name="button-icon" type="string" value="linuxmint-logo-filled-badge"/>
+      <property name="button-icon" type="string" value="view-app-grid"/>
       <property name="favorites-in-recent" type="bool" value="true"/>
       <property name="position-search-alternate" type="bool" value="true"/>
       <property name="position-categories-alternate" type="bool" value="true"/>
@@ -274,16 +275,16 @@
       <property name="favorites" type="array">
       </property>
       <property name="recent" type="array">
-        <value type="string" value="thunar.desktop"/>
-        <value type="string" value="xfce-settings-manager.desktop"/>
-        <value type="string" value="org.gnome.Firmware.desktop"/>
-        <value type="string" value="uget-gtk.desktop"/>
-        <value type="string" value="jetbrains-fleet-162c6744-44fe-4133-8106-af85796cbaee.desktop"/>
-        <value type="string" value="terminator.desktop"/>
-        <value type="string" value="xfce4-terminal.desktop"/>
-        <value type="string" value="gscriptor.desktop"/>
-        <value type="string" value="nvim.desktop"/>
-        <value type="string" value="mintinstall.desktop"/>
+        <value type="string" value="portmaster.desktop"/>
+        <value type="string" value="xreader.desktop"/>
+        <value type="string" value="mate-calc.desktop"/>
+        <value type="string" value="xfce4-mime-settings.desktop"/>
+        <value type="string" value="xfce-ui-settings.desktop"/>
+        <value type="string" value="NetworkManager Applet.desktop"/>
+        <value type="string" value="vim.desktop"/>
+        <value type="string" value="menulibre-zap.desktop"/>
+        <value type="string" value="color-picker.desktop"/>
+        <value type="string" value="webapp-manager.desktop"/>
       </property>
     </property>
     <property name="plugin-14" type="string" value="notification-plugin"/>

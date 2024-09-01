@@ -7,7 +7,7 @@
   <property name="color-background" type="string" value="#000000000000"/>
   <property name="color-palette" type="string" value="rgb(0,0,0);rgb(255,0,0);rgb(0,223,0);rgb(239,239,0);rgb(0,148,255);rgb(205,0,205);rgb(0,205,205);rgb(199,199,199);rgb(127,127,127);rgb(255,53,53);rgb(0,255,0);rgb(255,255,33);rgb(114,187,255);rgb(255,0,255);rgb(0,255,255);rgb(255,255,255)"/>
   <property name="run-custom-command" type="bool" value="true"/>
-  <property name="custom-command" type="string" value="tmux new \; set-option destroy-unattached on"/>
+  <property name="custom-command" type="string" value="zsh"/>
   <property name="font-name" type="string" value="JetBrainsMonoNL Nerd Font 10"/>
   <property name="misc-always-show-tabs" type="bool" value="false"/>
   <property name="misc-bell" type="bool" value="false"/>
