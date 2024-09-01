@@ -78,7 +78,7 @@ case "$TERM" in
         ;;
 esac
 
-source_if_exists "$HOME/.zshrc_custom"
+source_if_exists "$HOME/.bashrc_custom"
 
 source_if_exists "$HOME/.aliases"
 source_if_exists "$HOME/.aliases_custom"

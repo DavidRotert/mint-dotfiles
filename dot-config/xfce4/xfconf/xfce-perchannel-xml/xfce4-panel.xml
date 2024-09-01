@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <channel name="xfce4-panel" version="1.0">
-  <property name="configver" type="empty"/>
+  <property name="configver" type="int" value="2"/>
   <property name="panels" type="array">
     <value type="int" value="0"/>
     <value type="int" value="1"/>
     <property name="panel-1" type="empty">
-      <property name="position" type="empty"/>
+      <property name="position" type="string" value="p=10;x=965;y=1055"/>
       <property name="length" type="double" value="1"/>
-      <property name="position-locked" type="empty"/>
-      <property name="size" type="uint" value="55"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="size" type="uint" value="48"/>
       <property name="background-style" type="empty"/>
       <property name="background-alpha" type="empty"/>
       <property name="enter-opacity" type="empty"/>
@@ -51,7 +51,6 @@
         <value type="int" value="3"/>
         <value type="int" value="14"/>
         <value type="int" value="12"/>
-        <value type="int" value="11"/>
         <value type="int" value="9"/>
         <value type="int" value="19"/>
         <value type="int" value="18"/>
