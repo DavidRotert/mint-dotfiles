@@ -9,7 +9,7 @@
       <property name="position" type="string" value="p=10;x=965;y=1055"/>
       <property name="length" type="double" value="1"/>
       <property name="position-locked" type="bool" value="true"/>
-      <property name="size" type="uint" value="48"/>
+      <property name="size" type="uint" value="55"/>
       <property name="background-style" type="empty"/>
       <property name="background-alpha" type="empty"/>
       <property name="enter-opacity" type="empty"/>
@@ -274,6 +274,7 @@
       <property name="favorites" type="array">
       </property>
       <property name="recent" type="array">
+        <value type="string" value="thunar.desktop"/>
         <value type="string" value="portmaster.desktop"/>
         <value type="string" value="xreader.desktop"/>
         <value type="string" value="mate-calc.desktop"/>
@@ -283,7 +284,6 @@
         <value type="string" value="vim.desktop"/>
         <value type="string" value="menulibre-zap.desktop"/>
         <value type="string" value="color-picker.desktop"/>
-        <value type="string" value="webapp-manager.desktop"/>
       </property>
     </property>
     <property name="plugin-14" type="string" value="notification-plugin"/>
