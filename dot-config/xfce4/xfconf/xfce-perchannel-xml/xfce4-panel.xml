@@ -274,6 +274,7 @@
       <property name="favorites" type="array">
       </property>
       <property name="recent" type="array">
+        <value type="string" value="xfce-session-settings.desktop"/>
         <value type="string" value="thunar.desktop"/>
         <value type="string" value="portmaster.desktop"/>
         <value type="string" value="xreader.desktop"/>
@@ -283,7 +284,6 @@
         <value type="string" value="NetworkManager Applet.desktop"/>
         <value type="string" value="vim.desktop"/>
         <value type="string" value="menulibre-zap.desktop"/>
-        <value type="string" value="color-picker.desktop"/>
       </property>
     </property>
     <property name="plugin-14" type="string" value="notification-plugin"/>

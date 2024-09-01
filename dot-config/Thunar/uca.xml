@@ -12,7 +12,7 @@
 	<directories/>
 </action>
 <action>
-	<icon>folder</icon>
+	<icon>file-manager</icon>
 	<name>Als Systemverwalter öffnen</name>
 	<submenu></submenu>
 	<unique-id>1699624934163957-2</unique-id>
