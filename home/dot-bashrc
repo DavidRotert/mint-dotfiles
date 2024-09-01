@@ -8,6 +8,10 @@ case $- in
       *) return;;
 esac
 
+source_if_exists() {
+    [ -f "$1" ] && . "$1"
+}
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -16,6 +20,7 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTFILE="$HOME/.bash_history"
 HISTSIZE=1000
 HISTFILESIZE=2000
 PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
@@ -31,30 +36,92 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-color_black=0
-color_red=1
-color_green=2
-color_yellow=3
-color_blue=4
-color_purple=5
-color_cyan=6
-color_grey=7
+_FG_BLACK="$(tput setaf 0)"
+_FG_RED="$(tput setaf 1)"
+_FG_GREEN="$(tput setaf 2)"
+_FG_YELLOW="$(tput setaf 3)"
+_FG_BLUE="$(tput setaf 4)"
+_FG_PURPLE="$(tput setaf 5)"
+_FG_CYAN="$(tput setaf 6)"
+_FG_GREY="$(tput setaf 7)"
+_BG_BLACK="$(tput setab 0)"
+_BG_RED="$(tput setab 1)"
+_BG_GREEN="$(tput setab 2)"
+_BG_YELLOW="$(tput setab 3)"
+_BG_BLUE="$(tput setab 4)"
+_BG_PURPLE="$(tput setab 5)"
+_BG_CYAN="$(tput setab 6)"
+_BG_GREY="$(tput setab 7)"
+_RESET="$(tput sgr0)"
+_BOLD="$(tput bold)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
+source /etc/bash_completion.d/git-prompt
+
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+GIT_PS1_SHOWDIRTYSTATE="true"
+
+_render_git_branch_block() {
+    case "$TERM" in
+        xterm-color|*-256color)
+            if git rev-parse --is-inside-work-tree > /dev/null 2>&1
+            then
+                echo -n "${_BG_YELLOW}${_RESET}${_FG_BLACK}${_BG_YELLOW}  $(__git_ps1 "%s") ${_RESET}${_FG_YELLOW}"
+            else
+                echo -n ''
+            fi
+            ;;
+        *)
+            if git rev-parse --is-inside-work-tree > /dev/null 2>&1
+            then
+                echo -n " branch $(__git_ps1 "%s") "
+            else
+                echo -n ''
+            fi
+            ;;
+    esac
+    
+}
+
+_render_python_venv_block() {
+    case "$TERM" in
+        xterm-color|*-256color)
+            if [ -n "$VIRTUAL_ENV" ]
+            then
+                echo -n "${_BG_GREEN}${_RESET}${_FG_BLACK}${_BG_GREEN}  $(basename $VIRTUAL_ENV) ${_RESET}${_FG_GREEN}"
+            elif [ -n "$CONDA_PREFIX" ]
+            then
+                echo -n "${_BG_GREEN}${_RESET}${_FG_BLACK}${_BG_GREEN}  $(basename $CONDA_PREFIX) ${_RESET}${_FG_GREEN}"
+            else
+                echo -n ''
+            fi
+            ;;
+        *)
+            if [ -n "$VIRTUAL_ENV" ]
+            then
+                echo -n " Pyvenv $(basename $VIRTUAL_ENV) "
+            elif [ -n "$CONDA_PREFIX" ]
+            then
+                echo -n "Pyvenv $(basename $CONDA_PREFIX) "
+            else
+                echo -n ''
+            fi
+            ;;
+    esac
+}
+
+
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color)
-        PS1="${debian_chroot:+($debian_chroot)}\[$(tput setaf $color_green)$(tput bold)\]\u@\h\[$(tput sgr0)\]:\[$(tput setaf $color_blue)$(tput bold)\]\w\[$(tput sgr0)\]\$ "
-        ;;
-    *-256color)
-        PS1="${debian_chroot:+($debian_chroot)}\[$(tput setaf $color_green)$(tput bold)\]\u@\h\[$(tput sgr0)\]:\[$(tput setaf $color_blue)$(tput bold)\]\w\[$(tput sgr0)\]\$ "
+    xterm-color|*-256color)
+        PS1='\[${_FG_BLACK}${_BG_GREY}\]${debian_chroot:+( $debian_chroot )}\[${RESET}\]${_BOLD}\[${_FG_GREY}${_BG_BLUE}\]  \w \[${_RESET}${_FG_BLUE}\]$(_render_git_branch_block)$(_render_python_venv_block)\[${_RESET}${_FG_GREEN}\]\n❯\[${_RESET}\] '
         ;;
     *)
-        PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w\$ "
+        PS1="[ ${debian_chroot:+($debian_chroot)}\w ]\n$ "
         ;;
 esac
 

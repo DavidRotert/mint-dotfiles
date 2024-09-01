@@ -60,9 +60,9 @@ alias sudo='nocorrect sudo'
 setopt correct_all
 
 # History configuration
-export HISTFILE="$HOME/.zsh_history"
-export HISTSIZE=1000
-export SAVEHIST=2000
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=1000
+SAVEHIST=2000
 
 ## History command configuration
 setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
@@ -96,7 +96,7 @@ autoload edit-command-line
 zle -N edit-command-line
 bindkey "^e" edit-command-line
 
-PS1="%K{green}%F{black}%n@%m %k%f%K{blue}%F{black} %~ %k%f%B%K{white}%b%F{black}$%b%k%f "
+#PS1="%K{green}%F{black}%n@%m %k%f%K{blue}%F{black} %~ %k%f%B%K{white}%b%F{black}$%b%k%f "
 
 if [ -f "/usr/local/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme" ]
 then
