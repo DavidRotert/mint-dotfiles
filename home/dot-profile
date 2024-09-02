@@ -8,14 +8,15 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
+source_if_exists() {
+    [ -f "$1" ] && source "$1"
+}
+
 # if running bash
 if [ -n "$BASH_VERSION" ]
 then
     # include .bashrc if it exists
-    if [ -f "$HOME/.bashrc" ]
-    then
-        . "$HOME/.bashrc"
-    fi
+    source_if_exists "$HOME/.bashrc"
 fi
 
 # set PATH so it includes user's private bin if it exists
@@ -29,10 +30,6 @@ if [ -d "$HOME/.local/bin" ]
 then
     PATH="$HOME/.local/bin:$PATH"
 fi
-
-source_if_exists() {
-    [ -f "$1" ] && . "$1"
-}
 
 source_if_exists "$HOME/.environment"
 source_if_exists "$HOME/.environment_custom"

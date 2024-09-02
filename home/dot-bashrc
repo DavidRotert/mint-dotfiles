@@ -9,7 +9,7 @@ case $- in
 esac
 
 source_if_exists() {
-    [ -f "$1" ] && . "$1"
+    [ -f "$1" ] && source "$1"
 }
 
 # don't put duplicate lines or lines starting with space in the history.
@@ -60,12 +60,17 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-source /etc/bash_completion.d/git-prompt
+source_if_exists /etc/bash_completion.d/git-prompt
 
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 GIT_PS1_SHOWDIRTYSTATE="true"
 
 _render_git_branch_block() {
+    if [ ! -f /etc/bash_completion.d/git-prompt ]
+    then
+        return 0
+    fi
+
     case "$TERM" in
         xterm-color|*-256color)
             if git rev-parse --is-inside-work-tree > /dev/null 2>&1
@@ -130,9 +135,9 @@ esac
 # sources /etc/bash.bashrc).
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
+    source /usr/share/bash-completion/bash_completion
   elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
+    source /etc/bash_completion
   fi
 fi
 
