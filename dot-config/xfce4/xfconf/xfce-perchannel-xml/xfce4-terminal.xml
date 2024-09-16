@@ -49,4 +49,8 @@
   <property name="color-bold-is-bright" type="bool" value="true"/>
   <property name="color-use-theme" type="bool" value="false"/>
   <property name="tab-activity-color" type="string" value="#aa0000"/>
+  <property name="dropdown-width" type="uint" value="50"/>
+  <property name="dropdown-opacity" type="uint" value="100"/>
+  <property name="dropdown-position-vertical" type="uint" value="50"/>
+  <property name="dropdown-always-show-tabs" type="bool" value="false"/>
 </channel>

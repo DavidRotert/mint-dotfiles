@@ -9,7 +9,7 @@
       <property name="position" type="string" value="p=10;x=965;y=1055"/>
       <property name="length" type="double" value="1"/>
       <property name="position-locked" type="bool" value="true"/>
-      <property name="size" type="uint" value="55"/>
+      <property name="size" type="uint" value="54"/>
       <property name="background-style" type="empty"/>
       <property name="background-alpha" type="empty"/>
       <property name="enter-opacity" type="empty"/>
@@ -40,36 +40,36 @@
       <property name="enter-opacity" type="uint" value="100"/>
       <property name="icon-size" type="uint" value="0"/>
       <property name="leave-opacity" type="uint" value="100"/>
-      <property name="length" type="uint" value="100"/>
+      <property name="length" type="double" value="100"/>
       <property name="length-adjust" type="bool" value="true"/>
       <property name="mode" type="uint" value="0"/>
       <property name="output-name" type="string" value="Primary"/>
       <property name="plugin-ids" type="array">
-        <value type="int" value="22"/>
-        <value type="int" value="1"/>
+        <value type="int" value="21"/>
         <value type="int" value="6"/>
         <value type="int" value="3"/>
         <value type="int" value="14"/>
         <value type="int" value="12"/>
+        <value type="int" value="22"/>
         <value type="int" value="9"/>
-        <value type="int" value="19"/>
-        <value type="int" value="18"/>
-        <value type="int" value="21"/>
+        <value type="int" value="15"/>
         <value type="int" value="20"/>
         <value type="int" value="16"/>
+        <value type="int" value="18"/>
+        <value type="int" value="1"/>
         <value type="int" value="7"/>
-        <value type="int" value="15"/>
+        <value type="int" value="19"/>
         <value type="int" value="4"/>
       </property>
-      <property name="position" type="string" value="p=6;x=2880;y=16"/>
+      <property name="position" type="string" value="p=9;x=3202;y=14"/>
       <property name="position-locked" type="bool" value="true"/>
       <property name="role" type="string" value="xfce4-panel-12965750720"/>
-      <property name="size" type="uint" value="27"/>
+      <property name="size" type="uint" value="24"/>
     </property>
   </property>
   <property name="plugins" type="empty">
     <property name="plugin-1" type="string" value="separator">
-      <property name="expand" type="bool" value="true"/>
+      <property name="expand" type="bool" value="false"/>
       <property name="style" type="uint" value="0"/>
     </property>
     <property name="plugin-2" type="string" value="tasklist">
@@ -274,17 +274,16 @@
       <property name="favorites" type="array">
       </property>
       <property name="recent" type="array">
+        <value type="string" value="arch.desktop"/>
+        <value type="string" value="xfce-keyboard-settings.desktop"/>
+        <value type="string" value="xfce4-power-manager-settings.desktop"/>
         <value type="string" value="xfce-session-settings.desktop"/>
         <value type="string" value="thunar.desktop"/>
         <value type="string" value="portmaster.desktop"/>
-        <value type="string" value="xreader.desktop"/>
-        <value type="string" value="mate-calc.desktop"/>
         <value type="string" value="xfce4-mime-settings.desktop"/>
         <value type="string" value="xfce-ui-settings.desktop"/>
-        <value type="string" value="NetworkManager Applet.desktop"/>
-        <value type="string" value="vim.desktop"/>
-        <value type="string" value="menulibre-zap.desktop"/>
       </property>
+      <property name="menu-opacity" type="int" value="100"/>
     </property>
     <property name="plugin-14" type="string" value="notification-plugin"/>
     <property name="clipman" type="empty">
@@ -305,6 +304,7 @@
     </property>
     <property name="plugin-16" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
+      <property name="expand" type="bool" value="false"/>
     </property>
     <property name="plugin-18" type="string" value="datetime"/>
     <property name="plugin-19" type="string" value="separator">
@@ -313,6 +313,7 @@
     <property name="plugin-20" type="string" value="datetime"/>
     <property name="plugin-21" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
+      <property name="expand" type="bool" value="true"/>
     </property>
     <property name="plugin-24" type="string" value="launcher">
       <property name="items" type="array">
@@ -324,15 +325,11 @@
         <value type="string" value="16991702093.desktop"/>
       </property>
     </property>
-    <property name="plugin-22" type="string" value="tasklist">
-      <property name="grouping" type="bool" value="false"/>
-      <property name="show-labels" type="bool" value="false"/>
-      <property name="flat-buttons" type="bool" value="false"/>
-    </property>
     <property name="plugin-17" type="string" value="launcher">
       <property name="items" type="array">
         <value type="string" value="17239265782.desktop"/>
       </property>
     </property>
+    <property name="plugin-22" type="string" value="power-manager-plugin"/>
   </property>
 </channel>

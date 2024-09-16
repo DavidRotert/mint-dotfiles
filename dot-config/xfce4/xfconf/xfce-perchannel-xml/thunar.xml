@@ -14,15 +14,16 @@
   <property name="last-window-height" type="int" value="543"/>
   <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_38_PERCENT"/>
   <property name="last-details-view-visible-columns" type="string" value="THUNAR_COLUMN_DATE_MODIFIED,THUNAR_COLUMN_NAME,THUNAR_COLUMN_SIZE,THUNAR_COLUMN_TYPE"/>
-  <property name="last-details-view-column-widths" type="string" value="50,50,139,50,50,51,50,50,173,50,50,70,50,362"/>
+  <property name="last-details-view-column-widths" type="string" value="50,50,138,50,50,51,50,50,425,50,50,70,50,53"/>
   <property name="last-show-hidden" type="bool" value="false"/>
   <property name="misc-single-click" type="bool" value="false"/>
   <property name="tree-icon-size" type="string" value="THUNAR_ICON_SIZE_24"/>
   <property name="misc-middle-click-in-tab" type="bool" value="false"/>
   <property name="misc-full-path-in-tab-title" type="bool" value="false"/>
   <property name="misc-exec-shell-scripts-by-default" type="bool" value="true"/>
-  <property name="last-toolbar-item-order" type="string" value="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20"/>
-  <property name="last-toolbar-visible-buttons" type="string" value="0,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0"/>
+  <property name="last-toolbar-item-order" type="string" value="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22"/>
+  <property name="last-toolbar-visible-buttons" type="string" value="0,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0"/>
   <property name="last-image-preview-visible" type="bool" value="false"/>
   <property name="last-splitview-separator-position" type="int" value="341"/>
+  <property name="last-side-pane" type="string" value="ThunarShortcutsPane"/>
 </channel>
