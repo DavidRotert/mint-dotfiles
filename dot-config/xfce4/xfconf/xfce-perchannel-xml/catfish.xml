@@ -5,7 +5,7 @@
   <property name="show-sidebar" type="bool" value="true"/>
   <property name="list-toggle" type="bool" value="false"/>
   <property name="show-thumbnails" type="bool" value="true"/>
-  <property name="search-file-contents" type="bool" value="false"/>
+  <property name="search-file-contents" type="bool" value="true"/>
   <property name="match-results-exactly" type="bool" value="false"/>
   <property name="close-after-select" type="bool" value="false"/>
   <property name="search-compressed-files" type="bool" value="false"/>

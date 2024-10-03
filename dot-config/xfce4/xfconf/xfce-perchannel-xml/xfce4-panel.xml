@@ -76,6 +76,7 @@
       <property name="show-labels" type="bool" value="false"/>
       <property name="include-all-workspaces" type="bool" value="true"/>
       <property name="grouping" type="bool" value="true"/>
+      <property name="window-scrolling" type="bool" value="false"/>
     </property>
     <property name="plugin-3" type="string" value="xapp-status-plugin">
       <property name="items" type="empty"/>
@@ -274,6 +275,7 @@
       <property name="favorites" type="array">
       </property>
       <property name="recent" type="array">
+        <value type="string" value="epp.package.jee.desktop"/>
         <value type="string" value="arch.desktop"/>
         <value type="string" value="xfce-keyboard-settings.desktop"/>
         <value type="string" value="xfce4-power-manager-settings.desktop"/>
