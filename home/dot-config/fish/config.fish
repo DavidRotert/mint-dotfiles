@@ -1,3 +1,1 @@
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-end
+/home/david/dotfiles/home/dot-config/fish/config.fish

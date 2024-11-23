@@ -13,7 +13,7 @@ echo "=== Install dependencies"
 sudo apt install wget stow unzip git
 
 echo "=== Install ZSH and shells"
-sudo apt install zsh zsh-syntax-highlighting zsh-autosuggestions fish terminator lsd
+sudo apt install zsh zsh-syntax-highlighting zsh-autosuggestions fish terminator lsd fzf
 sudo mkdir -p /usr/local/share/zsh/themes
 if [ ! -e /usr/local/share/zsh/themes/powerlevel10k ]
 then

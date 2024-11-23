@@ -96,6 +96,8 @@ autoload edit-command-line
 zle -N edit-command-line
 bindkey "^e" edit-command-line
 
+source_if_exists /usr/share/doc/fzf/examples/key-bindings.zsh
+
 #PS1="%K{green}%F{black}%n@%m %k%f%K{blue}%F{black} %~ %k%f%B%K{white}%b%F{black}$%b%k%f "
 
 if [ -f "/usr/local/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme" ]

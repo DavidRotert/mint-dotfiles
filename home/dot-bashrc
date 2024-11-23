@@ -153,6 +153,8 @@ case "$TERM" in
         ;;
 esac
 
+source_if_exists /usr/share/doc/fzf/examples/key-bindings.bash
+
 source_if_exists "$HOME/.bashrc_custom"
 
 source_if_exists "$HOME/.aliases"
