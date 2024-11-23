@@ -10,10 +10,15 @@ jetbrains_mono_nerdfont_version="v3.3.0"
 set -euo pipefail
 
 echo "=== Install dependencies"
-sudo apt install wget stow unzip
+sudo apt install wget stow unzip git
 
 echo "=== Install ZSH and shells"
-sudo apt install zsh zsh-syntax-highlighting zsh-autosuggestions fish
+sudo apt install zsh zsh-syntax-highlighting zsh-autosuggestions fish terminator lsd
+sudo mkdir -p /usr/local/share/zsh/themes
+if [ ! -e /usr/local/share/zsh/themes/powerlevel10k ]
+then
+    sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /usr/local/share/zsh/themes/powerlevel10k
+fi
 
 echo "=== Download and install GTK themes"
 sudo apt install gtk2-engines-murrine gtk2-engines-pixbuf sassc optipng inkscape libglib2.0-dev-bin
@@ -47,4 +52,7 @@ sudo unzip -jo /tmp/jetbrains-mono.zip -d /usr/local/share/fonts "fonts/ttf/*"
 
 wget -O /tmp/jetbrains-mono-nerdfont.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/$jetbrains_mono_nerdfont_version/JetBrainsMono.zip"
 sudo unzip -o /tmp/jetbrains-mono-nerdfont.zip -d /usr/local/share/fonts
+
+echo "=== Install software"
+sudo apt install xcape vlc
 

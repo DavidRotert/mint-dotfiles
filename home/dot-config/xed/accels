@@ -3,8 +3,8 @@
 ;
 ; (gtk_accel_path "<Actions>/FileBrowserWidgetSelectionActionGroup/FileMoveToTrash" "")
 ; (gtk_accel_path "<Actions>/FileBrowserWidgetSelectionActionGroup/FileDelete" "")
-; (gtk_accel_path "<Actions>/XedWindowActions/SearchGoToLine" "<Primary>i")
 ; (gtk_accel_path "<Actions>/XedWindowAlwaysSensitiveActions/ViewOverviewMap" "F12")
+; (gtk_accel_path "<Actions>/XedWindowActions/SearchGoToLine" "<Primary>i")
 ; (gtk_accel_path "<Actions>/XedWindowAlwaysSensitiveActions/ViewToolbar" "")
 ; (gtk_accel_path "<Actions>/XedWindowAlwaysSensitiveActions/ViewFullscreen" "F11")
 ; (gtk_accel_path "<Actions>/XedWindowActions/FileSaveAll" "<Primary><Shift>l")
