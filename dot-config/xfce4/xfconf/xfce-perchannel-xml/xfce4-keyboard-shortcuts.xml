@@ -55,8 +55,8 @@
       <property name="&lt;Super&gt;Escape" type="string" value="xfdesktop --menu"/>
       <property name="&lt;Super&gt;o" type="string" value="xfce4-display-settings"/>
       <property name="&lt;Alt&gt;F1" type="string" value="xfce4-appfinder"/>
-      <property name="&lt;Super&gt;c" type="string" value="mate-calc"/>
       <property name="&lt;Shift&gt;&lt;Super&gt;t" type="string" value="xfce4-terminal --drop-down"/>
+      <property name="&lt;Super&gt;c" type="string" value="gnome-calculator"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

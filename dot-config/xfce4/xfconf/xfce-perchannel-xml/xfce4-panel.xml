@@ -244,7 +244,7 @@
     </property>
     <property name="plugin-9" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="known-players" type="string" value="firefox"/>
+      <property name="known-players" type="string" value="Brave;Chromium;firefox"/>
       <property name="mpris-players" type="string" value="brave.instance19276;chromium.instance4421;firefox.instance104160;firefox.instance19503;firefox.instance31656;firefox.instance3894;firefox.instance44743;firefox.instance5735;firefox.instance62316;firefox.instance7743;firefox.instance_1_122;firefox.instance_1_139;firefox.instance_1_144;firefox.instance_1_153;firefox.instance_1_167;firefox.instance_1_202;firefox.instance_1_227;firefox.instance_1_239;firefox.instance_1_248;firefox.instance_1_262;firefox.instance_1_303;firefox.instance_1_470;firefox.instance_1_474;firefox.instance_1_539;firefox.instance_1_759;firefox.instance_1_919;firefox.instance_1_94;firefox.instance_1_95;io.github.celluloid_player.Celluloid.instance-1;jak-cli.instance78928;rhythmbox;vlc"/>
       <property name="show-notifications" type="bool" value="false"/>
     </property>
@@ -275,15 +275,16 @@
       <property name="favorites" type="array">
       </property>
       <property name="recent" type="array">
+        <value type="string" value="xfce-keyboard-settings.desktop"/>
+        <value type="string" value="uget-gtk.desktop"/>
+        <value type="string" value="xfce4-run.desktop"/>
         <value type="string" value="epp.package.jee.desktop"/>
         <value type="string" value="arch.desktop"/>
-        <value type="string" value="xfce-keyboard-settings.desktop"/>
         <value type="string" value="xfce4-power-manager-settings.desktop"/>
         <value type="string" value="xfce-session-settings.desktop"/>
         <value type="string" value="thunar.desktop"/>
         <value type="string" value="portmaster.desktop"/>
         <value type="string" value="xfce4-mime-settings.desktop"/>
-        <value type="string" value="xfce-ui-settings.desktop"/>
       </property>
       <property name="menu-opacity" type="int" value="100"/>
     </property>
