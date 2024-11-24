@@ -24,14 +24,14 @@ echo "=== Download and install GTK themes"
 sudo apt install gtk2-engines-murrine gtk2-engines-pixbuf sassc optipng inkscape libglib2.0-dev-bin
 
 wget -O /tmp/Mojave-gtk-theme.zip "https://github.com/vinceliuice/Mojave-gtk-theme/archive/refs/tags/$mojave_gtk_theme_tag.zip"
-unzip -o /tmp/Mojave-gtk-theme.zip -d /tmp
+unzip -o /tmp/Mojave-gtk-theme.zip -d /tmp > /dev/null
 cd "/tmp/Mojave-gtk-theme-$mojave_gtk_theme_tag"
 sudo ./install.sh --libadwaita --theme all
 
 echo "=== Download and install icon themes"
 sudo apt install papirus-icon-theme
 wget -O /tmp/WhiteSur-icon-theme.zip "https://github.com/vinceliuice/WhiteSur-icon-theme/archive/refs/tags/$whitesur_icon_theme_tag.zip"
-unzip -o /tmp/WhiteSur-icon-theme.zip -d /tmp
+unzip -o /tmp/WhiteSur-icon-theme.zip -d /tmp  > /dev/null
 cd "/tmp/WhiteSur-icon-theme-$whitesur_icon_theme_tag"
 sudo ./install.sh --theme all
 sudo sed -i 's/Inherits=.*/Inherits=Papirus-Light,hicolor/g' "/usr/share/icons/WhiteSur-light/index.theme"
@@ -48,11 +48,10 @@ echo "=== Download and install fonts"
 mkdir -p /usr/local/share/fonts
 
 wget -O /tmp/jetbrains-mono.zip "https://download.jetbrains.com/fonts/JetBrainsMono-$jetbrains_mono_version.zip"
-sudo unzip -jo /tmp/jetbrains-mono.zip -d /usr/local/share/fonts "fonts/ttf/*"
+sudo unzip -jo /tmp/jetbrains-mono.zip -d /usr/local/share/fonts "fonts/ttf/*"  > /dev/null
 
 wget -O /tmp/jetbrains-mono-nerdfont.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/$jetbrains_mono_nerdfont_version/JetBrainsMono.zip"
-sudo unzip -o /tmp/jetbrains-mono-nerdfont.zip -d /usr/local/share/fonts
+sudo unzip -o /tmp/jetbrains-mono-nerdfont.zip -d /usr/local/share/fonts  > /dev/null
 
 echo "=== Install software"
-sudo apt install xcape vlc
-
+sudo apt install xcape vlc copyq
