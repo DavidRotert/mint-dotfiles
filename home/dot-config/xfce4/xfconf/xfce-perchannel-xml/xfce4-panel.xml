@@ -275,15 +275,14 @@
       <property name="favorites" type="array">
       </property>
       <property name="recent" type="array">
+        <value type="string" value="xfce4-settings-editor.desktop"/>
+        <value type="string" value="org.gnome.seahorse.Application.desktop"/>
+        <value type="string" value="vim.desktop"/>
         <value type="string" value="xfce-keyboard-settings.desktop"/>
-        <value type="string" value="uget-gtk.desktop"/>
         <value type="string" value="xfce4-run.desktop"/>
-        <value type="string" value="epp.package.jee.desktop"/>
-        <value type="string" value="arch.desktop"/>
         <value type="string" value="xfce4-power-manager-settings.desktop"/>
         <value type="string" value="xfce-session-settings.desktop"/>
         <value type="string" value="thunar.desktop"/>
-        <value type="string" value="portmaster.desktop"/>
         <value type="string" value="xfce4-mime-settings.desktop"/>
       </property>
       <property name="menu-opacity" type="int" value="100"/>

@@ -34,9 +34,11 @@ def main(argv: list):
             link_target_file = os.path.join(target_path, link_target_folder, file)
             
             if os.path.exists(link_target_file) and not os.path.islink(link_target_file):
-                overwrite = input(f"File or directory '{link_target_file}' already exists. Should I create a backup and overwrite it? [Y/n] ")
+                overwrite = input(f"File or directory '{link_target_file}' already exists. Should I create a backup and overwrite it or (a)dopt it? [Y/n/a] ")
                 if overwrite.lower() == "y":
                     os.rename(link_target_file, link_target_file + ".bak")
+                elif overwrite.lower() == "a":
+                    os.rename(link_target_file, link_source_file)
                 else:
                     os.remove(link_target_file)
             elif os.path.exists(link_target_file) or os.path.islink(link_target_file):
