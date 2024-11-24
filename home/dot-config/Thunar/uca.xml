@@ -23,6 +23,17 @@
 	<directories/>
 </action>
 <action>
+	<icon>application-default-icon</icon>
+	<name>Starter anlegen</name>
+	<submenu></submenu>
+	<unique-id>1732456126418362-1</unique-id>
+	<command>exo-desktop-item-edit --create-new --type Application %f</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
 	<icon>emblem-symbolic-link</icon>
 	<name>Verknüpfung anlegen</name>
 	<submenu></submenu>

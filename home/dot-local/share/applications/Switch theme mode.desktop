@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Switch theme mode
+Comment=
+Exec=¨/.local/bin/switch-light-and-dark-mode.py
+Icon=lighttable
+Path=
+Terminal=false
+StartupNotify=false
