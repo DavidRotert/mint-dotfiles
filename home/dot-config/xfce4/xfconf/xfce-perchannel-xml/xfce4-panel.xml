@@ -275,6 +275,8 @@
       <property name="favorites" type="array">
       </property>
       <property name="recent" type="array">
+        <value type="string" value="color-picker.desktop"/>
+        <value type="string" value="Switch theme mode.desktop"/>
         <value type="string" value="gscriptor.desktop"/>
         <value type="string" value="xfce-keyboard-settings.desktop"/>
         <value type="string" value="uget-gtk.desktop"/>
@@ -283,8 +285,6 @@
         <value type="string" value="arch.desktop"/>
         <value type="string" value="xfce4-power-manager-settings.desktop"/>
         <value type="string" value="xfce-session-settings.desktop"/>
-        <value type="string" value="thunar.desktop"/>
-        <value type="string" value="portmaster.desktop"/>
       </property>
       <property name="menu-opacity" type="int" value="100"/>
     </property>
