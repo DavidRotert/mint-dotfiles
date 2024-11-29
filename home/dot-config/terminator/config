@@ -7,7 +7,7 @@
     background_darkness = 0.85
     cursor_fg_color = "#000000"
     cursor_bg_color = "#f6f5f4"
-    font = JetBrains Mono NL 10
+    font = JetBrainsMonoNL Nerd Font 10
     foreground_color = "#f6f5f4"
     scrollback_lines = 1000
     palette = "#232323:#ff000f:#8ce10b:#ffb900:#008df8:#6d43a6:#00d8eb:#ffffff:#444444:#ff2740:#abe15b:#ffd242:#0092ff:#9a5feb:#67fff0:#ffffff"
