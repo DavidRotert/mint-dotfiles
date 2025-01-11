@@ -125,7 +125,7 @@ _render_python_venv_block() {
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color|*-256color)
+    xterm-color|*-256color|xterm-ghostty)
         PS1='\[${_FG_BLACK}${_BG_GREY}\]${debian_chroot:+( $debian_chroot )}\[${RESET}\]\[${_BOLD}\]\[${_FG_GREY}${_BG_BLUE}\]  \w \[${_RESET}\]\[${_FG_BLUE}\]$(_render_git_branch_block)$(_render_python_venv_block)\[${_RESET}\]\[${_FG_GREEN}\]\n❯\[${_RESET}\] '
         ;;
     *)
