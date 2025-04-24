@@ -14,6 +14,7 @@
       <property name="background-alpha" type="empty"/>
       <property name="enter-opacity" type="empty"/>
       <property name="leave-opacity" type="empty"/>
+      <property name="icon-size" type="uint" value="0"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="13"/>
         <value type="int" value="10"/>
@@ -64,7 +65,7 @@
       <property name="position" type="string" value="p=9;x=3202;y=14"/>
       <property name="position-locked" type="bool" value="true"/>
       <property name="role" type="string" value="xfce4-panel-12965750720"/>
-      <property name="size" type="uint" value="24"/>
+      <property name="size" type="uint" value="25"/>
     </property>
   </property>
   <property name="plugins" type="empty">
@@ -103,6 +104,9 @@
       <property name="hide-new-items" type="bool" value="false"/>
       <property name="icon-size" type="int" value="0"/>
       <property name="known-items" type="array">
+        <value type="string" value="opensnitch-ui"/>
+        <value type="string" value="jetbrains-toolbox"/>
+        <value type="string" value="rangoli"/>
         <value type="string" value="psensor"/>
         <value type="string" value="transmission-gtk"/>
         <value type="string" value="SimpleScreenRecorder"/>
@@ -132,6 +136,7 @@
         <value type="string" value="redshift"/>
       </property>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="copyq"/>
         <value type="string" value="uget-gtk"/>
         <value type="string" value="com.cisco.anyconnect.gui"/>
         <value type="string" value="cisco anyconnect secure mobility client"/>
@@ -236,6 +241,7 @@
       </property>
     </property>
     <property name="plugin-8" type="string" value="launcher">
+      <property name="icon-size" type="empty"/>
       <property name="names-visible" type="empty"/>
       <property name="show-frame" type="empty"/>
       <property name="items" type="array">
@@ -275,6 +281,8 @@
       <property name="favorites" type="array">
       </property>
       <property name="recent" type="array">
+        <value type="string" value="org.xfce.Catfish.desktop"/>
+        <value type="string" value="xfce-session-settings.desktop"/>
         <value type="string" value="mintsources.desktop"/>
         <value type="string" value="webapp-manager.desktop"/>
         <value type="string" value="xfce-wm-settings.desktop"/>
@@ -283,8 +291,6 @@
         <value type="string" value="gscriptor.desktop"/>
         <value type="string" value="xfce-keyboard-settings.desktop"/>
         <value type="string" value="uget-gtk.desktop"/>
-        <value type="string" value="xfce4-run.desktop"/>
-        <value type="string" value="epp.package.jee.desktop"/>
       </property>
       <property name="menu-opacity" type="int" value="100"/>
     </property>

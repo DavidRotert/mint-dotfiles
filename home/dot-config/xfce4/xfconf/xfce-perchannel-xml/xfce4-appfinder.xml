@@ -43,4 +43,10 @@
     <property name="window-width" type="int" value="580"/>
     <property name="pane-position" type="int" value="180"/>
   </property>
+  <property name="hide-window-decorations" type="bool" value="false"/>
+  <property name="hide-category-pane" type="bool" value="true"/>
+  <property name="icon-view" type="bool" value="false"/>
+  <property name="item-icon-size" type="uint" value="2"/>
+  <property name="always-center" type="bool" value="true"/>
+  <property name="sort-by-frecency" type="bool" value="true"/>
 </channel>

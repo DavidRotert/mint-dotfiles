@@ -58,6 +58,13 @@ _BOLD="$(tput bold)"
 _ESC_START="\001"
 _ESC_END="\002"
 
+color_support=false
+case "$TERM" in
+    xterm-color|xterm-256color|xterm-kitty|xterm-ghostty)
+        color_support=true
+        ;;
+esac
+
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
@@ -72,66 +79,59 @@ _render_git_branch_block() {
         return 0
     fi
 
-    case "$TERM" in
-        xterm-color|*-256color)
-            if git rev-parse --is-inside-work-tree > /dev/null 2>&1
-            then
-                echo -e -n "${_ESC_START}${_BG_YELLOW}${_ESC_END}${_ESC_START}${_RESET}${_ESC_END}${_ESC_START}${_FG_BLACK}${_BG_YELLOW}${_ESC_END}  $(__git_ps1 "%s") ${_ESC_START}${_RESET}${_ESC_END}${_ESC_START}${_FG_YELLOW}${_ESC_END}"
-            else
-                echo -n ''
-            fi
-            ;;
-        *)
-            if git rev-parse --is-inside-work-tree > /dev/null 2>&1
-            then
-                echo -n " branch $(__git_ps1 "%s") "
-            else
-                echo -n ''
-            fi
-            ;;
-    esac
-    
+    if [ "$color_support" = true ]
+    then
+        if git rev-parse --is-inside-work-tree > /dev/null 2>&1
+        then
+            echo -e -n "${_ESC_START}${_BG_YELLOW}${_ESC_END}${_ESC_START}${_RESET}${_ESC_END}${_ESC_START}${_FG_BLACK}${_BG_YELLOW}${_ESC_END}  $(__git_ps1 "%s") ${_ESC_START}${_RESET}${_ESC_END}${_ESC_START}${_FG_YELLOW}${_ESC_END}"
+        else
+            echo -n ''
+        fi
+    else
+        if git rev-parse --is-inside-work-tree > /dev/null 2>&1
+        then
+            echo -n " branch $(__git_ps1 "%s") "
+        else
+            echo -n ''
+        fi
+    fi
 }
 
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 _render_python_venv_block() {
-    case "$TERM" in
-        xterm-color|*-256color)
-            if [ -n "$VIRTUAL_ENV" ]
-            then
-                echo -e -n "${_ESC_START}${_BG_GREEN}${_ESC_END}${_ESC_START}${_RESET}${_ESC_END}${_ESC_START}${_FG_BLACK}${_BG_GREEN}${_ESC_END}  $(basename $VIRTUAL_ENV) ${_ESC_START}${_RESET}${_ESC_END}${_ESC_START}${_FG_GREEN}${_ESC_END}"
-            elif [ -n "$CONDA_PREFIX" ]
-            then
-                echo -e -n "${_ESC_START}${_BG_GREEN}${_ESC_END}${_ESC_START}${_RESET}${_ESC_END}${_ESC_START}${_FG_BLACK}${_BG_GREEN}${_ESC_END}  $(basename $CONDA_PREFIX) ${_ESC_START}${_RESET}${_ESC_END}${_ESC_START}${_FG_GREEN}${_ESC_END}"
-            else
-                echo -n ''
-            fi
-            ;;
-        *)
-            if [ -n "$VIRTUAL_ENV" ]
-            then
-                echo -n " Pyvenv $(basename $VIRTUAL_ENV) "
-            elif [ -n "$CONDA_PREFIX" ]
-            then
-                echo -n "Pyvenv $(basename $CONDA_PREFIX) "
-            else
-                echo -n ''
-            fi
-            ;;
-    esac
+    if [ "$color_support" = true ]
+    then
+        if [ -n "$VIRTUAL_ENV" ]
+        then
+            echo -e -n "${_ESC_START}${_BG_GREEN}${_ESC_END}${_ESC_START}${_RESET}${_ESC_END}${_ESC_START}${_FG_BLACK}${_BG_GREEN}${_ESC_END}  $(basename $VIRTUAL_ENV) ${_ESC_START}${_RESET}${_ESC_END}${_ESC_START}${_FG_GREEN}${_ESC_END}"
+        elif [ -n "$CONDA_PREFIX" ]
+        then
+            echo -e -n "${_ESC_START}${_BG_GREEN}${_ESC_END}${_ESC_START}${_RESET}${_ESC_END}${_ESC_START}${_FG_BLACK}${_BG_GREEN}${_ESC_END}  $(basename $CONDA_PREFIX) ${_ESC_START}${_RESET}${_ESC_END}${_ESC_START}${_FG_GREEN}${_ESC_END}"
+        else
+            echo -n ''
+        fi
+    else
+        if [ -n "$VIRTUAL_ENV" ]
+        then
+            echo -n " Pyvenv $(basename $VIRTUAL_ENV) "
+        elif [ -n "$CONDA_PREFIX" ]
+        then
+            echo -n " Pyvenv $(basename $CONDA_PREFIX) "
+        else
+            echo -n ''
+        fi
+    fi
 }
 
 
 # set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-    xterm-color|*-256color|xterm-ghostty)
-        PS1='\[${_FG_BLACK}${_BG_GREY}\]${debian_chroot:+( $debian_chroot )}\[${RESET}\]\[${_BOLD}\]\[${_FG_GREY}${_BG_BLUE}\]  \w \[${_RESET}\]\[${_FG_BLUE}\]$(_render_git_branch_block)$(_render_python_venv_block)\[${_RESET}\]\[${_FG_GREEN}\]\n❯\[${_RESET}\] '
-        ;;
-    *)
-        PS1="[ ${debian_chroot:+($debian_chroot)}\w ]\n$ "
-        ;;
-esac
+if [ "$color_support" = true ]
+then
+    PS1='\[${_FG_BLACK}${_BG_GREY}\]${debian_chroot:+( $debian_chroot )}\[${RESET}\]\[${_BOLD}\]\[${_FG_GREY}${_BG_BLUE}\]  \w \[${_RESET}\]\[${_FG_BLUE}\]$(_render_git_branch_block)$(_render_python_venv_block)\[${_RESET}\]\[${_FG_GREEN}\]\n❯\[${_RESET}\] '
+else
+    PS1="[ ${debian_chroot:+($debian_chroot)}\w ]\n$ "
+fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile

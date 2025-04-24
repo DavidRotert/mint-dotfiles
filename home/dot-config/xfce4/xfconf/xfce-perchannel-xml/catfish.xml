@@ -5,14 +5,14 @@
   <property name="show-sidebar" type="bool" value="true"/>
   <property name="list-toggle" type="bool" value="false"/>
   <property name="show-thumbnails" type="bool" value="true"/>
-  <property name="search-file-contents" type="bool" value="true"/>
+  <property name="search-file-contents" type="bool" value="false"/>
   <property name="match-results-exactly" type="bool" value="false"/>
   <property name="close-after-select" type="bool" value="false"/>
   <property name="search-compressed-files" type="bool" value="false"/>
   <property name="file-size-binary" type="bool" value="true"/>
   <property name="window-width" type="int" value="803"/>
   <property name="window-height" type="int" value="528"/>
-  <property name="window-x" type="int" value="558"/>
-  <property name="window-y" type="int" value="240"/>
+  <property name="window-x" type="int" value="2662"/>
+  <property name="window-y" type="int" value="367"/>
   <property name="exclude-paths" type="string" value="/dev;~/.cache;~/.gvfs;"/>
 </channel>
