@@ -104,8 +104,9 @@
       <property name="hide-new-items" type="bool" value="false"/>
       <property name="icon-size" type="int" value="0"/>
       <property name="known-items" type="array">
-        <value type="string" value="steam"/>
-        <value type="string" value="vokoscreenNG"/>
+        <value type="string" value="opensnitch-ui"/>
+        <value type="string" value="jetbrains-toolbox"/>
+        <value type="string" value="rangoli"/>
         <value type="string" value="psensor"/>
         <value type="string" value="transmission-gtk"/>
         <value type="string" value="SimpleScreenRecorder"/>
@@ -135,6 +136,7 @@
         <value type="string" value="redshift"/>
       </property>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="copyq"/>
         <value type="string" value="uget-gtk"/>
         <value type="string" value="com.cisco.anyconnect.gui"/>
         <value type="string" value="cisco anyconnect secure mobility client"/>
@@ -248,7 +250,7 @@
     </property>
     <property name="plugin-9" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="known-players" type="string" value="Brave;Chromium;firefox;vlc"/>
+      <property name="known-players" type="string" value="Brave;Chromium;firefox"/>
       <property name="mpris-players" type="string" value="brave.instance19276;chromium.instance4421;firefox.instance104160;firefox.instance19503;firefox.instance31656;firefox.instance3894;firefox.instance44743;firefox.instance5735;firefox.instance62316;firefox.instance7743;firefox.instance_1_122;firefox.instance_1_139;firefox.instance_1_144;firefox.instance_1_153;firefox.instance_1_167;firefox.instance_1_202;firefox.instance_1_227;firefox.instance_1_239;firefox.instance_1_248;firefox.instance_1_262;firefox.instance_1_303;firefox.instance_1_470;firefox.instance_1_474;firefox.instance_1_539;firefox.instance_1_759;firefox.instance_1_919;firefox.instance_1_94;firefox.instance_1_95;io.github.celluloid_player.Celluloid.instance-1;jak-cli.instance78928;rhythmbox;vlc"/>
       <property name="show-notifications" type="bool" value="false"/>
     </property>
@@ -281,14 +283,14 @@
       <property name="recent" type="array">
         <value type="string" value="xfce-keyboard-settings.desktop"/>
         <value type="string" value="xfce-session-settings.desktop"/>
-        <value type="string" value="gufw.desktop"/>
-        <value type="string" value="org.gnome.Calculator.desktop"/>
-        <value type="string" value="Prism Laincher.desktop"/>
-        <value type="string" value="code.desktop"/>
-        <value type="string" value="com.github.hluk.copyq.desktop"/>
-        <value type="string" value="xfce-display-settings.desktop"/>
-        <value type="string" value="jetbrains-clion-0a25d28b-c990-4e45-84f4-4f3ee89983b0.desktop"/>
+        <value type="string" value="com.mitchellh.ghostty.desktop"/>
+        <value type="string" value="install4j_tmnpg7-BurpSuiteCommunity.desktop"/>
+        <value type="string" value="org.xfce.Catfish.desktop"/>
         <value type="string" value="mintsources.desktop"/>
+        <value type="string" value="webapp-manager.desktop"/>
+        <value type="string" value="xfce-wm-settings.desktop"/>
+        <value type="string" value="color-picker.desktop"/>
+        <value type="string" value="Switch theme mode.desktop"/>
       </property>
       <property name="menu-opacity" type="int" value="100"/>
     </property>
