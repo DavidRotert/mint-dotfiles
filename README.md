@@ -2,5 +2,6 @@
 
 If you install the dotfiles for the first time, run
 ```
-./instal.sh
+./install-packages-and-themes.sh
+./symlinker.py home
 ```

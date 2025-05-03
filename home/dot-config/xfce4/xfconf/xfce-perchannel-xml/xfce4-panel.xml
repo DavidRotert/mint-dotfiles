@@ -281,16 +281,16 @@
       <property name="favorites" type="array">
       </property>
       <property name="recent" type="array">
-        <value type="string" value="xfce-keyboard-settings.desktop"/>
-        <value type="string" value="xfce-session-settings.desktop"/>
-        <value type="string" value="com.mitchellh.ghostty.desktop"/>
-        <value type="string" value="install4j_tmnpg7-BurpSuiteCommunity.desktop"/>
-        <value type="string" value="org.xfce.Catfish.desktop"/>
-        <value type="string" value="mintsources.desktop"/>
-        <value type="string" value="webapp-manager.desktop"/>
-        <value type="string" value="xfce-wm-settings.desktop"/>
+        <value type="string" value="xfce-ui-settings.desktop"/>
+        <value type="string" value="ZAP.desktop"/>
+        <value type="string" value="WebApp-Mattermost1886.desktop"/>
+        <value type="string" value="org.flameshot.Flameshot.desktop"/>
         <value type="string" value="color-picker.desktop"/>
-        <value type="string" value="Switch theme mode.desktop"/>
+        <value type="string" value="jetbrains-gateway-0401db2e-c8bc-4cbc-aa10-0cdd16384391.desktop"/>
+        <value type="string" value="idle-python3.12.desktop"/>
+        <value type="string" value="remote-viewer.desktop"/>
+        <value type="string" value="webapp-manager.desktop"/>
+        <value type="string" value="uget-gtk.desktop"/>
       </property>
       <property name="menu-opacity" type="int" value="100"/>
     </property>

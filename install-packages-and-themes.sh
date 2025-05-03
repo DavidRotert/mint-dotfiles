@@ -3,17 +3,17 @@
 script_dir="$(dirname "$(readlink -f "$0")")"
 
 mojave_gtk_theme_tag="2024-11-15"
-whitesur_icon_theme_tag="2024-09-07"
+whitesur_icon_theme_tag="2025-02-10"
 jetbrains_mono_version="2.304"
 jetbrains_mono_nerdfont_version="v3.3.0"
 
 set -euo pipefail
 
 echo "=== Install dependencies"
-sudo apt install wget stow unzip git
+sudo apt install wget unzip git
 
 echo "=== Install ZSH and shells"
-sudo apt install zsh zsh-syntax-highlighting zsh-autosuggestions fish terminator lsd fzf
+sudo apt install zsh zsh-syntax-highlighting zsh-autosuggestions terminator lsd fzf
 sudo mkdir -p /usr/local/share/zsh/themes
 if [ ! -e /usr/local/share/zsh/themes/powerlevel10k ]
 then
@@ -30,7 +30,7 @@ sudo ./install.sh --libadwaita --theme all
 
 echo "=== Download and install icon themes"
 sudo apt install papirus-icon-theme
-wget -O /tmp/WhiteSur-icon-theme.zip "https://github.com/vinceliuice/WhiteSur-icon-theme/archive/refs/tags/$whitesur_icon_theme_tag.zip"
+wget -O /tmp/WhiteSur-icon-theme.zip "https://github.com/vinceliuice/WhiteSur-icon-theme/archive/refs/tags/v$whitesur_icon_theme_tag.zip"
 unzip -o /tmp/WhiteSur-icon-theme.zip -d /tmp  > /dev/null
 cd "/tmp/WhiteSur-icon-theme-$whitesur_icon_theme_tag"
 sudo ./install.sh --theme all
@@ -41,7 +41,7 @@ for color in "green" "grey" "nord" "orange" "pink" "purple" "red" "yellow"
 do
     sudo sed -i 's/Inherits=.*/Inherits=Papirus-Light,hicolor/g' "/usr/share/icons/WhiteSur-$color-light/index.theme"
     sudo sed -i 's/Inherits=.*/Inherits=Papirus-Dark,hicolor/g' "/usr/share/icons/WhiteSur-$color-dark/index.theme"
-    sudo sed -i 's/Inherits=.*/Inherits=ePapirus,hicolor/g' "/usr/share/icons/WhiteSur-$color/index.theme"
+    sudo sed -i 's/Inherits=.*/Inherits=Papirus,hicolor/g' "/usr/share/icons/WhiteSur-$color/index.theme"
 done
 
 echo "=== Download and install fonts"
