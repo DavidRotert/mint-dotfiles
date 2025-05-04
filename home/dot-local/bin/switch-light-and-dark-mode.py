@@ -24,15 +24,19 @@ def toggle_mode_name(previous_mode: str):
         "Light": "Dark",
 
         "dark": "light",
-        "Dark": "Light"
+        "Dark": "Light",
+
+        "0": "1",
+        "1": "0"
     }
     return translations[previous_mode]
 
 def toggle_mode(current_theme: str):
-    match = re.search(r"^.*(?P<mode>[Ll]ight|[Dd]ark).*$", current_theme)
+    match = re.search(r"^.*(?P<mode>[Ll]ight|[Dd]ark|0|1).*$", current_theme)
     if match:
         mode = match.group("mode")
-        return current_theme.replace(mode, toggle_mode_name(mode))
+        new_mode = current_theme.replace(mode.strip(), toggle_mode_name(mode))
+        return new_mode
     else:
         return current_theme
 
@@ -43,8 +47,9 @@ def toggle_xfce_setting(channel: str, property: str):
 
 def toggle_setting_in_ini(setting, settings_file):
     settings_content = read_file(settings_file)
-    value_mach = re.search(fr"^{setting}=(?P<value>.*)$", settings_content, re.MULTILINE)
+    value_mach = re.search(fr"^{setting} ?= ?(?P<value>.*)$", settings_content, re.MULTILINE)
     if value_mach:
+        sed(f"s/{setting} = .*/{setting} = {toggle_mode(value_mach.group("value"))}/g", settings_file)
         sed(f"s/{setting}=.*/{setting}={toggle_mode(value_mach.group("value"))}/g", settings_file)
     else:
         print(f"Could not change {setting}")
@@ -67,6 +72,12 @@ def toggle_xed_theme():
     }
     cmd(["dconf", "write", "/org/x/editor/preferences/editor/scheme", f"'{translations[xed_theme]}'"])
 
+def toggle_variety_mode():
+    cmd(["killall", "variety"])
+    variety_config = os.path.join(os.path.expanduser("~"), ".config/variety/variety.conf")
+    toggle_setting_in_ini("lightness_mode", variety_config)
+    os.system("variety >/dev/null 2>/dev/null &")
+
 
 if __name__ == "__main__":
     toggle_xfce_setting("xfwm4", "/general/theme")
@@ -75,3 +86,4 @@ if __name__ == "__main__":
     toggle_kvantum_theme()
     toggle_qt_theme()
     toggle_xed_theme()
+    toggle_variety_mode()
