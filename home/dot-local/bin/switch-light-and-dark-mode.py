@@ -73,10 +73,13 @@ def toggle_xed_theme():
     cmd(["dconf", "write", "/org/x/editor/preferences/editor/scheme", f"'{translations[xed_theme]}'"])
 
 def toggle_variety_mode():
-    cmd(["killall", "variety"])
+    variety_is_running = cmd(["pgrep", "variety"]) != ""
+    if variety_is_running:
+        cmd(["killall", "variety"])
     variety_config = os.path.join(os.path.expanduser("~"), ".config/variety/variety.conf")
     toggle_setting_in_ini("lightness_mode", variety_config)
-    os.system("variety >/dev/null 2>/dev/null &")
+    if variety_is_running:
+        os.system("variety >/dev/null 2>/dev/null &")
 
 
 if __name__ == "__main__":
