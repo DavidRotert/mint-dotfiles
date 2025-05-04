@@ -59,6 +59,14 @@ def toggle_qt_theme():
     qt5ct_config = os.path.join(os.path.expanduser("~"), ".config/qt5ct/qt5ct.conf")
     toggle_setting_in_ini("icon_theme", qt5ct_config)
 
+def toggle_xed_theme():
+    xed_theme = cmd(["dconf", "read", "/org/x/editor/preferences/editor/scheme"]).strip("'")
+    translations = {
+        "catppuccin-macchiato": "catppuccin-latte",
+        "catppuccin-latte": "catppuccin-macchiato"
+    }
+    cmd(["dconf", "write", "/org/x/editor/preferences/editor/scheme", f"'{translations[xed_theme]}'"])
+
 
 if __name__ == "__main__":
     toggle_xfce_setting("xfwm4", "/general/theme")
@@ -66,3 +74,4 @@ if __name__ == "__main__":
     toggle_xfce_setting("xsettings", "/Net/IconThemeName")
     toggle_kvantum_theme()
     toggle_qt_theme()
+    toggle_xed_theme()
