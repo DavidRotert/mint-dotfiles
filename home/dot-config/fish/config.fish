@@ -1,1 +1,0 @@
-/home/david/dotfiles/home/dot-config/fish/config.fish

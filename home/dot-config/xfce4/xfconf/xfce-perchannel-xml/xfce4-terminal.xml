@@ -2,7 +2,7 @@
 
 <channel name="xfce4-terminal" version="1.0">
   <property name="background-mode" type="string" value="TERMINAL_BACKGROUND_SOLID"/>
-  <property name="background-darkness" type="double" value="0.94999999999999996"/>
+  <property name="background-darkness" type="double" value="0.84999999999999998"/>
   <property name="color-foreground" type="string" value="#fffaf4"/>
   <property name="color-background" type="string" value="#0e1019"/>
   <property name="color-palette" type="string" value="#232323;#ff000f;#8ce10b;#ffb900;#008df8;#6d43a6;#00d8eb;#ffffff;#444444;#ff2740;#abe15b;#ffd242;#0092ff;#9a5feb;#67fff0;#ffffff"/>
@@ -50,8 +50,9 @@
   <property name="color-use-theme" type="bool" value="false"/>
   <property name="tab-activity-color" type="string" value="#aa0000"/>
   <property name="dropdown-width" type="uint" value="50"/>
-  <property name="dropdown-opacity" type="uint" value="100"/>
-  <property name="dropdown-position-vertical" type="uint" value="50"/>
+  <property name="dropdown-opacity" type="uint" value="90"/>
+  <property name="dropdown-position-vertical" type="uint" value="85"/>
   <property name="dropdown-always-show-tabs" type="bool" value="false"/>
   <property name="encoding" type="string" value=""/>
+  <property name="dropdown-height" type="uint" value="35"/>
 </channel>

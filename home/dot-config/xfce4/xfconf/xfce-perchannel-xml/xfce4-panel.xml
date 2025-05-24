@@ -104,6 +104,7 @@
       <property name="hide-new-items" type="bool" value="false"/>
       <property name="icon-size" type="int" value="0"/>
       <property name="known-items" type="array">
+        <value type="string" value="XtwqV85Eqj"/>
         <value type="string" value="opensnitch-ui"/>
         <value type="string" value="jetbrains-toolbox"/>
         <value type="string" value="rangoli"/>
@@ -281,16 +282,16 @@
       <property name="favorites" type="array">
       </property>
       <property name="recent" type="array">
-        <value type="string" value="xfce-ui-settings.desktop"/>
-        <value type="string" value="ZAP.desktop"/>
-        <value type="string" value="WebApp-Mattermost1886.desktop"/>
-        <value type="string" value="org.flameshot.Flameshot.desktop"/>
-        <value type="string" value="color-picker.desktop"/>
-        <value type="string" value="jetbrains-gateway-0401db2e-c8bc-4cbc-aa10-0cdd16384391.desktop"/>
-        <value type="string" value="idle-python3.12.desktop"/>
-        <value type="string" value="remote-viewer.desktop"/>
-        <value type="string" value="webapp-manager.desktop"/>
-        <value type="string" value="uget-gtk.desktop"/>
+        <value type="string" value="Switch theme mode.desktop"/>
+        <value type="string" value="mintstick.desktop"/>
+        <value type="string" value="transmission-gtk.desktop"/>
+        <value type="string" value="Zed.desktop"/>
+        <value type="string" value="Bruno.desktop"/>
+        <value type="string" value="install4j_h0z7la-SoapUI-5.8.0.desktop"/>
+        <value type="string" value="xfce4-appfinder.desktop"/>
+        <value type="string" value="mintsources.desktop"/>
+        <value type="string" value="nvim-qt.desktop"/>
+        <value type="string" value="brave-browser.desktop"/>
       </property>
       <property name="menu-opacity" type="int" value="100"/>
     </property>

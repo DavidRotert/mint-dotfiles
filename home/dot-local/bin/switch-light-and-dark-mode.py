@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import re, subprocess, os
+import re, subprocess, os, time
 
 def cmd(cmd: list):
     return subprocess.run(cmd, capture_output=True, text=True).stdout.rstrip("\n")
@@ -27,12 +27,16 @@ def toggle_mode_name(previous_mode: str):
         "Dark": "Light",
 
         "0": "1",
-        "1": "0"
+        "1": "0",
+        "True": "False",
+        "true": "false",
+        "False": "True",
+        "false": "true"
     }
     return translations[previous_mode]
 
 def toggle_mode(current_theme: str):
-    match = re.search(r"^.*(?P<mode>[Ll]ight|[Dd]ark|0|1).*$", current_theme)
+    match = re.search(r"^.*(?P<mode>[Ll]ight|[Dd]ark|0|1|[Tt]rue|[Ff]alse).*$", current_theme)
     if match:
         mode = match.group("mode")
         new_mode = current_theme.replace(mode.strip(), toggle_mode_name(mode))
@@ -76,7 +80,9 @@ def toggle_variety_mode():
     variety_is_running = cmd(["pgrep", "variety"]) != ""
     if variety_is_running:
         cmd(["killall", "variety"])
+        time.sleep(3)
     variety_config = os.path.join(os.path.expanduser("~"), ".config/variety/variety.conf")
+    toggle_setting_in_ini("lightness_enabled", variety_config)
     toggle_setting_in_ini("lightness_mode", variety_config)
     if variety_is_running:
         os.system("variety >/dev/null 2>/dev/null &")
