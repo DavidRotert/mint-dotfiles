@@ -13,7 +13,7 @@ echo "=== Install dependencies"
 sudo apt install wget unzip git
 
 echo "=== Install ZSH and shells"
-sudo apt install zsh zsh-syntax-highlighting zsh-autosuggestions terminator lsd fzf
+sudo apt install tmux zsh zsh-syntax-highlighting zsh-autosuggestions terminator lsd fzf
 sudo mkdir -p /usr/local/share/zsh/themes
 if [ ! -e /usr/local/share/zsh/themes/powerlevel10k ]
 then
