@@ -53,5 +53,10 @@ sudo unzip -jo /tmp/jetbrains-mono.zip -d /usr/local/share/fonts "fonts/ttf/*"  
 wget -O /tmp/jetbrains-mono-nerdfont.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/$jetbrains_mono_nerdfont_version/JetBrainsMono.zip"
 sudo unzip -o /tmp/jetbrains-mono-nerdfont.zip -d /usr/local/share/fonts  > /dev/null
 
+echo "=== Download Xed Catppuccin themes"
+wget -O ~/.local/share/xed/styles/catppuccin-latte-xed-theme.xml "https://raw.githubusercontent.com/catppuccin/xed/refs/heads/main/src/latte.xml"
+wget -O ~/.local/share/xed/styles/catppuccin-macchiato-xed-theme.xml "https://raw.githubusercontent.com/catppuccin/xed/refs/heads/main/src/macchiato.xml"
+
 echo "=== Install software"
-sudo apt install xcape vlc copyq
+sudo apt install xcape vlc copyq variety
+
