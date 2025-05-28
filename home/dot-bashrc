@@ -60,7 +60,7 @@ _ESC_END="\002"
 
 color_support=false
 case "$TERM" in
-    xterm-color|xterm-256color|xterm-kitty|xterm-ghostty)
+    *-color|*-256color|xterm-kitty|xterm-ghostty)
         color_support=true
         ;;
 esac
@@ -128,9 +128,9 @@ _render_python_venv_block() {
 # set a fancy prompt (non-color, unless we know we "want" color)
 if [ "$color_support" = true ]
 then
-    PS1='\[${_FG_BLACK}${_BG_GREY}\]${debian_chroot:+( $debian_chroot )}\[${RESET}\]\[${_BOLD}\]\[${_FG_GREY}${_BG_BLUE}\]  \w \[${_RESET}\]\[${_FG_BLUE}\]$(_render_git_branch_block)$(_render_python_venv_block)\[${_RESET}\]\[${_FG_GREEN}\]\n❯\[${_RESET}\] '
+    PS1='\n\[${_FG_BLACK}${_BG_GREY}\]${debian_chroot:+( $debian_chroot )}\[${RESET}\]\[${_BOLD}\]\[${_FG_GREY}${_BG_BLUE}\]  \w \[${_RESET}\]\[${_FG_BLUE}\]$(_render_git_branch_block)$(_render_python_venv_block)\[${_RESET}\]\[${_FG_GREEN}\]\n❯\[${_RESET}\] '
 else
-    PS1="[ ${debian_chroot:+($debian_chroot)}\w ]\n$ "
+    PS1="\n[ ${debian_chroot:+($debian_chroot)}\w ]\n$ "
 fi
 
 # enable programmable completion features (you don't need to enable
