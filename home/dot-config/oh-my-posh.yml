@@ -44,22 +44,26 @@ blocks:
     segments:
       - type: go
         style: plain
-        foreground: black
-        background: lightBlue
-        template: " {{ .Major }}{{ .Minor }} "
+        foreground: white
+        background: "#ff007d9c"
+        template: "{{ if not .Error }} {{ .Major }}{{ .Minor }} {{ end }}"
       - type: python
         style: plain
-        foreground: black
-        background: green
-        template: "  {{ .Major }}.{{ .Minor }} ({{ .Venv }}) "
+        foreground: white
+        background: "#009300"
+        template: "{{ if not .Error }}   {{ .Major }}.{{ .Minor }} ({{ .Venv }}) {{ end }}"
         properties:
           fetch_virtual_env: true
           fetch_version: true
           show_version: true
       - type: node
+        foreground: white
+        background: "#417e38"
+        template: "{{ if not .Error }} 󰎙 {{ .Major }}.{{ .Minor }} {{ end }}"
+      - type: deno
         foreground: black
-        background: green
-        template: " Node {{ .Major }} "
+        background: lightGreen
+        template: "{{ if not .Error }}  {{ .Major }}.{{ .Minor }} {{ end }}"
       - type: executiontime
         style: plain
         forground: lightGrey

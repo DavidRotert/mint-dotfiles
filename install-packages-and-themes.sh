@@ -5,7 +5,8 @@ script_dir="$(dirname "$(readlink -f "$0")")"
 mojave_gtk_theme_tag="2024-11-15"
 whitesur_icon_theme_tag="2025-02-10"
 jetbrains_mono_version="2.304"
-jetbrains_mono_nerdfont_version="v3.3.0"
+jetbrains_mono_nerdfont_version="3.3.0"
+oh_my_posh_version="25.23.3"
 
 set -euo pipefail
 
@@ -14,10 +15,16 @@ sudo apt install wget unzip git
 
 echo "=== Install ZSH and shells"
 sudo apt install tmux zsh zsh-syntax-highlighting zsh-autosuggestions terminator lsd fzf
-sudo mkdir -p /usr/local/share/zsh/themes
-if [ ! -e /usr/local/share/zsh/themes/powerlevel10k ]
+
+#sudo mkdir -p /usr/local/share/zsh/themes
+#if [ ! -e /usr/local/share/zsh/themes/powerlevel10k ]
+#then
+#    sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /usr/local/share/zsh/themes/powerlevel10k
+#fi
+
+if [ ! -e /usr/local/bin/oh-my-posh ]
 then
-    sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /usr/local/share/zsh/themes/powerlevel10k
+    wget -O /usr/local/bin/oh-my-posh "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v$oh_my_posh_version/posh-linux-amd64"
 fi
 
 echo "=== Download and install GTK themes"
@@ -48,11 +55,10 @@ echo "=== Download and install fonts"
 mkdir -p /usr/local/share/fonts
 
 wget -O /tmp/jetbrains-mono.zip "https://download.jetbrains.com/fonts/JetBrainsMono-$jetbrains_mono_version.zip"
-sudo unzip -jo /tmp/jetbrains-mono.zip -d /usr/local/share/fonts "fonts/ttf/*"  > /dev/null
+sudo unzip -jo /tmp/jetbrains-mono.zip -d /usr/local/share/fonts "fonts/ttf/*" > /dev/null
 
-wget -O /tmp/jetbrains-mono-nerdfont.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/$jetbrains_mono_nerdfont_version/JetBrainsMono.zip"
-sudo unzip -o /tmp/jetbrains-mono-nerdfont.zip -d /usr/local/share/fonts  > /dev/null
+wget -O /tmp/jetbrains-mono-nerdfont.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/v$jetbrains_mono_nerdfont_version/JetBrainsMono.zip"
+sudo unzip -o /tmp/jetbrains-mono-nerdfont.zip -d /usr/local/share/fonts > /dev/null
 
 echo "=== Install software"
 sudo apt install xcape vlc copyq variety
-
