@@ -1,8 +1,14 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+local __prompt_theme="oh-my-posh"
+
+if [ "$__prompt_theme" = "p10k" ]
+then
+    # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+    # Initialization code that may require console input (password prompts, [y/n]
+    # confirmations, etc.) must go above this block; everything else may go below.
+    if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
+    then
+        source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+    fi
 fi
 
 source_if_exists() {
@@ -10,32 +16,39 @@ source_if_exists() {
 }
 
 load_zsh_plugin() {
-    plugin_name="$1"
-    possible_plugin_file_locations=(
-        "/usr/share/zsh/plugins/$plugin_name.plugin.zsh"
-        "/usr/share/zsh/plugins/$plugin_name.zsh"
-        "/usr/share/zsh/plugins/$plugin_name/$plugin_name.plugin.zsh"
-        "/usr/share/zsh/plugins/$plugin_name/$plugin_name.zsh"
-        "/usr/share/$plugin_name/$plugin_name.plugin.zsh"
-        "/usr/share/$plugin_name/$plugin_name.zsh"
+    local __plugin_name="$1"
+    local __possible_plugin_file_locations=(
+        "/usr/local/share/zsh/plugins/$__plugin_name.plugin.zsh"
+        "/usr/local/share/zsh/plugins/$__plugin_name.zsh"
+        "/usr/local/share/zsh/plugins/$__plugin_name/$__plugin_name.plugin.zsh"
+        "/usr/local/share/zsh/plugins/$__plugin_name/$__plugin_name.zsh"
+        "/usr/local/share/$__plugin_name/$__plugin_name.plugin.zsh"
+        "/usr/local/share/$__plugin_name/$__plugin_name.zsh"
+
+        "/usr/share/zsh/plugins/$__plugin_name.plugin.zsh"
+        "/usr/share/zsh/plugins/$__plugin_name.zsh"
+        "/usr/share/zsh/plugins/$__plugin_name/$__plugin_name.plugin.zsh"
+        "/usr/share/zsh/plugins/$__plugin_name/$__plugin_name.zsh"
+        "/usr/share/$__plugin_name/$__plugin_name.plugin.zsh"
+        "/usr/share/$__plugin_name/$__plugin_name.zsh"
     )
 
-    for plugin_file in $possible_plugin_file_locations
+    for __plugin_file in $__possible_plugin_file_locations
     do
-        if [ -f "$plugin_file" ]
+        if [ -f "$__plugin_file" ]
         then        
-            source "$plugin_file"
+            source "$__plugin_file"
             return 0
         fi
     done
-    echo "ZSH plugin '$plugin_name' could not be loaded" > /dev/stderr
+    echo "ZSH plugin '$__plugin_name' could not be loaded" > /dev/stderr
 }
 
-plugins=(zsh-autosuggestions zsh-syntax-highlighting)
+local __plugins=(zsh-autosuggestions zsh-syntax-highlighting)
 
-for plugin in $plugins
+for __plugin in $__plugins
 do
-    load_zsh_plugin "$plugin"
+    load_zsh_plugin "$__plugin"
 done
 
 # ZSH built in autocomplete
@@ -102,11 +115,14 @@ source_if_exists /usr/share/doc/fzf/examples/key-bindings.zsh
 
 #PS1="%K{green}%F{black}%n@%m %k%f%K{blue}%F{black} %~ %k%f%B%K{white}%b%F{black}$%b%k%f "
 
-if [ -f "/usr/local/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme" ]
+if [ "$__prompt_theme" = "p10k" ] && [ -f "/usr/local/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme" ]
 then
     source /usr/local/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
     # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
     source_if_exists ~/.p10k.zsh
+elif [ "$__prompt_theme" = "oh-my-posh" ] && command -v "oh-my-posh" &>/dev/null
+then
+    eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh.yml)"
 fi
 
 source_if_exists "$HOME/.zshrc_custom"
