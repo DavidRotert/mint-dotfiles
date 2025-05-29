@@ -1,16 +1,3 @@
-local __prompt_theme="oh-my-posh"
-
-if [ "$__prompt_theme" = "p10k" ]
-then
-    # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-    # Initialization code that may require console input (password prompts, [y/n]
-    # confirmations, etc.) must go above this block; everything else may go below.
-    if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
-    then
-        source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-    fi
-fi
-
 source_if_exists() {
     [ -f "$1" ] && source "$1"
 }
@@ -113,14 +100,14 @@ bindkey "^e" edit-command-line
 
 source_if_exists /usr/share/doc/fzf/examples/key-bindings.zsh
 
-#PS1="%K{green}%F{black}%n@%m %k%f%K{blue}%F{black} %~ %k%f%B%K{white}%b%F{black}$%b%k%f "
+color_support=false
+case "$TERM" in
+    *-color|*-256color|xterm-kitty|xterm-ghostty)
+        color_support=true
+        ;;
+esac
 
-if [ "$__prompt_theme" = "p10k" ] && [ -f "/usr/local/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme" ]
-then
-    source /usr/local/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
-    # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-    source_if_exists ~/.p10k.zsh
-elif [ "$__prompt_theme" = "oh-my-posh" ] && command -v "oh-my-posh" &>/dev/null
+if [ "$color_support" = true ]
 then
     eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh.yml)"
 fi

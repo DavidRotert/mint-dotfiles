@@ -36,27 +36,27 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-_FG_BLACK="$(tput setaf 0)"
-_FG_RED="$(tput setaf 1)"
-_FG_GREEN="$(tput setaf 2)"
-_FG_YELLOW="$(tput setaf 3)"
-_FG_BLUE="$(tput setaf 4)"
-_FG_PURPLE="$(tput setaf 5)"
-_FG_CYAN="$(tput setaf 6)"
-_FG_GREY="$(tput setaf 7)"
-_BG_BLACK="$(tput setab 0)"
-_BG_RED="$(tput setab 1)"
-_BG_GREEN="$(tput setab 2)"
-_BG_YELLOW="$(tput setab 3)"
-_BG_BLUE="$(tput setab 4)"
-_BG_PURPLE="$(tput setab 5)"
-_BG_CYAN="$(tput setab 6)"
-_BG_GREY="$(tput setab 7)"
-_RESET="$(tput sgr0)"
-_BOLD="$(tput bold)"
+__FG_BLACK="$(tput setaf 0)"
+__FG_RED="$(tput setaf 1)"
+__FG_GREEN="$(tput setaf 2)"
+__FG_YELLOW="$(tput setaf 3)"
+__FG_BLUE="$(tput setaf 4)"
+__FG_PURPLE="$(tput setaf 5)"
+__FG_CYAN="$(tput setaf 6)"
+__FG_GREY="$(tput setaf 7)"
+__BG_BLACK="$(tput setab 0)"
+__BG_RED="$(tput setab 1)"
+__BG_GREEN="$(tput setab 2)"
+__BG_YELLOW="$(tput setab 3)"
+__BG_BLUE="$(tput setab 4)"
+__BG_PURPLE="$(tput setab 5)"
+__BG_CYAN="$(tput setab 6)"
+__BG_GREY="$(tput setab 7)"
+__RESET="$(tput sgr0)"
+__BOLD="$(tput bold)"
 # escape caracters for echoing with colors in functions for PS1 https://stackoverflow.com/questions/6592077/bash-prompt-and-echoing-colors-inside-a-function
-_ESC_START="\001"
-_ESC_END="\002"
+__ESC_START="\001"
+__ESC_END="\002"
 
 color_support=false
 case "$TERM" in
@@ -70,65 +70,9 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-source_if_exists /etc/bash_completion.d/git-prompt
-GIT_PS1_SHOWDIRTYSTATE="true"
-
-_render_git_branch_block() {
-    if [ ! -f /etc/bash_completion.d/git-prompt ]
-    then
-        return 0
-    fi
-
-    if [ "$color_support" = true ]
-    then
-        if git rev-parse --is-inside-work-tree > /dev/null 2>&1
-        then
-            echo -e -n "${_ESC_START}${_BG_YELLOW}${_ESC_END}${_ESC_START}${_RESET}${_ESC_END}${_ESC_START}${_FG_BLACK}${_BG_YELLOW}${_ESC_END}  $(__git_ps1 "%s") ${_ESC_START}${_RESET}${_ESC_END}${_ESC_START}${_FG_YELLOW}${_ESC_END}"
-        else
-            echo -n ''
-        fi
-    else
-        if git rev-parse --is-inside-work-tree > /dev/null 2>&1
-        then
-            echo -n " branch $(__git_ps1 "%s") "
-        else
-            echo -n ''
-        fi
-    fi
-}
-
-export VIRTUAL_ENV_DISABLE_PROMPT=1
-
-_render_python_venv_block() {
-    if [ "$color_support" = true ]
-    then
-        if [ -n "$VIRTUAL_ENV" ]
-        then
-            echo -e -n "${_ESC_START}${_BG_GREEN}${_ESC_END}${_ESC_START}${_RESET}${_ESC_END}${_ESC_START}${_FG_BLACK}${_BG_GREEN}${_ESC_END}  $(basename $VIRTUAL_ENV) ${_ESC_START}${_RESET}${_ESC_END}${_ESC_START}${_FG_GREEN}${_ESC_END}"
-        elif [ -n "$CONDA_PREFIX" ]
-        then
-            echo -e -n "${_ESC_START}${_BG_GREEN}${_ESC_END}${_ESC_START}${_RESET}${_ESC_END}${_ESC_START}${_FG_BLACK}${_BG_GREEN}${_ESC_END}  $(basename $CONDA_PREFIX) ${_ESC_START}${_RESET}${_ESC_END}${_ESC_START}${_FG_GREEN}${_ESC_END}"
-        else
-            echo -n ''
-        fi
-    else
-        if [ -n "$VIRTUAL_ENV" ]
-        then
-            echo -n " Pyvenv $(basename $VIRTUAL_ENV) "
-        elif [ -n "$CONDA_PREFIX" ]
-        then
-            echo -n " Pyvenv $(basename $CONDA_PREFIX) "
-        else
-            echo -n ''
-        fi
-    fi
-}
-
-
-# set a fancy prompt (non-color, unless we know we "want" color)
 if [ "$color_support" = true ]
 then
-    PS1='\n\[${_FG_BLACK}${_BG_GREY}\]${debian_chroot:+( $debian_chroot )}\[${RESET}\]\[${_BOLD}\]\[${_FG_GREY}${_BG_BLUE}\]  \w \[${_RESET}\]\[${_FG_BLUE}\]$(_render_git_branch_block)$(_render_python_venv_block)\[${_RESET}\]\[${_FG_GREEN}\]\n❯\[${_RESET}\] '
+    eval "$(oh-my-posh init bash --config ~/.config/oh-my-posh.yml)"
 else
     PS1="\n[ ${debian_chroot:+($debian_chroot)}\w ]\n$ "
 fi

@@ -25,7 +25,7 @@ blocks:
         background: blue
         properties:
           style: powerlevel
-          max_width: 30
+          max_width: 40
       - type: git
         style: powerline
         powerline_symbol: ""
@@ -33,11 +33,15 @@ blocks:
         background: green
         background_templates:
           - "{{ if or (.Working.Changed) (.Staging.Changed) }}yellow{{ end }}"
-        template: " {{ .UpstreamIcon }} {{ .HEAD }}{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if or (.Working.Changed) (.Staging.Changed) }} {{ .Working.String }}>>{{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} *{{ .StashCount }}{{ end }} "
+        template: " {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }} {{ .Working.String }}>>{{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} *{{ .StashCount }}{{ end }}{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }} "
         properties:
           fetch_status: true
-          fetch_upstream_icon: true
+          fetch_upstream_icon: false
           branch_icon: ""
+          branch_identical_icon: ""
+          #branch_ahead_icon: ""
+          #branch_behind_icon: ""
+          #branch_gone_icon: ""
 
   - type: prompt
     alignment: right
@@ -66,8 +70,8 @@ blocks:
         template: "{{ if not .Error }}  {{ .Major }}.{{ .Minor }} {{ end }}"
       - type: executiontime
         style: plain
-        forground: lightGrey
-        background: black
+        forground: white
+        background: grey
         properties:
           threshold: 100
 
