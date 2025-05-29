@@ -25,6 +25,7 @@ sudo apt install tmux zsh zsh-syntax-highlighting zsh-autosuggestions terminator
 if [ ! -e /usr/local/bin/oh-my-posh ]
 then
     wget -O /usr/local/bin/oh-my-posh "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v$oh_my_posh_version/posh-linux-amd64"
+    chmod +x /usr/local/bin/oh-my-posh
 fi
 
 echo "=== Download and install GTK themes"
