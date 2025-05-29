@@ -16,16 +16,10 @@ sudo apt install wget unzip git
 echo "=== Install ZSH and shells"
 sudo apt install tmux zsh zsh-syntax-highlighting zsh-autosuggestions terminator lsd fzf
 
-#sudo mkdir -p /usr/local/share/zsh/themes
-#if [ ! -e /usr/local/share/zsh/themes/powerlevel10k ]
-#then
-#    sudo git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /usr/local/share/zsh/themes/powerlevel10k
-#fi
-
 if [ ! -e /usr/local/bin/oh-my-posh ]
 then
-    wget -O /usr/local/bin/oh-my-posh "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v$oh_my_posh_version/posh-linux-amd64"
-    chmod +x /usr/local/bin/oh-my-posh
+    sudo wget -O /usr/local/bin/oh-my-posh "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v$oh_my_posh_version/posh-linux-amd64"
+    sudo chmod +x /usr/local/bin/oh-my-posh
 fi
 
 echo "=== Download and install GTK themes"
