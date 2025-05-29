@@ -20,6 +20,7 @@ load_zsh_plugin() {
         "/usr/share/$__plugin_name/$__plugin_name.zsh"
     )
 
+    local __plugin_file
     for __plugin_file in $__possible_plugin_file_locations
     do
         if [ -f "$__plugin_file" ]
@@ -33,6 +34,7 @@ load_zsh_plugin() {
 
 local __plugins=(zsh-autosuggestions zsh-syntax-highlighting)
 
+local __plugin
 for __plugin in $__plugins
 do
     load_zsh_plugin "$__plugin"
