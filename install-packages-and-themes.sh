@@ -14,7 +14,7 @@ echo "=== Install dependencies"
 sudo apt install wget unzip git
 
 echo "=== Install ZSH and shells"
-sudo apt install tmux zsh zsh-syntax-highlighting zsh-autosuggestions terminator lsd fzf
+sudo apt install tmux zsh zsh-syntax-highlighting zsh-autosuggestions terminator lsd fzf zoxide
 
 if [ ! -e /usr/local/bin/oh-my-posh ]
 then

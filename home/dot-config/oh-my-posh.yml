@@ -26,7 +26,7 @@ blocks:
         template: " {{ if not .Writable }} {{ end }}{{ .Path }} "
         properties:
           style: powerlevel
-          max_width: 40
+          max_width: 35
       - type: git
         style: powerline
         powerline_symbol: ""
@@ -34,7 +34,7 @@ blocks:
         background: green
         background_templates:
           - "{{ if or (.Working.Changed) (.Staging.Changed) }}yellow{{ end }}"
-        template: " {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }} {{ .Working.String }}>>{{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} *{{ .StashCount }}{{ end }}{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }} "
+        template: " {{ .HEAD }}{{ $workingCount := add .Working.Added .Working.Deleted .Working.Modified .Working.Untracked }}{{ if gt $workingCount 0 }} -{{ $workingCount }}{{ end }}{{ $stagingCount := add .Staging.Added .Staging.Deleted .Staging.Modified .Staging.Untracked }}{{ if gt $stagingCount 0 }} +{{ $stagingCount }}{{ end }}{{ $unmergedCount := add .Working.Unmerged .Staging.Unmerged }}{{ if gt $unmergedCount 0 }} x{{ $unmergedCount }}{{ end }}{{ if gt .StashCount 0 }} *{{ .StashCount }}{{ end }}{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }} "
         properties:
           fetch_status: true
           fetch_upstream_icon: false
@@ -46,33 +46,41 @@ blocks:
 
   - type: prompt
     alignment: right
+    overflow: break
     segments:
       - type: go
         style: plain
+        powerline_symbol: ""
         foreground: white
         background: "#ff007d9c"
-        template: "{{ if not .Error }} {{ .Major }}{{ .Minor }} {{ end }}"
+        template: "{{ if not .Error }} {{ .Major }}.{{ .Minor }} {{ end }}"
       - type: python
         style: plain
-        foreground: white
-        background: "#009300"
-        template: "{{ if not .Error }}   {{ .Major }}.{{ .Minor }} ({{ .Venv }}) {{ end }}"
+        powerline_symbol: ""
+        foreground: black
+        background: "#fed43c"
+        template: "{{ if not .Error }}  {{ .Major }}.{{ .Minor }} {{ .Venv }} {{ end }}"
         properties:
           fetch_virtual_env: true
           fetch_version: true
           show_version: true
       - type: node
+        style: plain
+        powerline_symbol: ""
         foreground: white
         background: "#417e38"
         template: "{{ if not .Error }} 󰎙 {{ .Major }}.{{ .Minor }} {{ end }}"
       - type: deno
+        style: plain
+        powerline_symbol: ""
         foreground: black
         background: lightGreen
         template: "{{ if not .Error }}  {{ .Major }}.{{ .Minor }} {{ end }}"
       - type: executiontime
         style: plain
-        forground: white
-        background: grey
+        powerline_symbol: ""
+        foreground: white
+        background: black
         properties:
           threshold: 100
 
