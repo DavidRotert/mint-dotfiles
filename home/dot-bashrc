@@ -99,6 +99,12 @@ esac
 
 source_if_exists /usr/share/doc/fzf/examples/key-bindings.bash
 
+if command -v zoxide &>/dev/null
+then
+    eval "$(zoxide init bash)"
+    alias cd="z"
+fi
+
 source_if_exists "$HOME/.bashrc_custom"
 
 source_if_exists "$HOME/.aliases"
