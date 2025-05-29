@@ -23,6 +23,7 @@ blocks:
         powerline_symbol: ""
         foreground: white
         background: blue
+        template: " {{ if not .Writable }} {{ end }}{{ .Path }} "
         properties:
           style: powerlevel
           max_width: 40
