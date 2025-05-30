@@ -14,7 +14,8 @@ blocks:
         background: blue
         template: " {{ if not .Writable }} {{ end }}{{ .Path }} "
         properties:
-          style: full
+          style: powerlevel
+          max_width: 40
       - type: git
         style: powerline
         powerline_symbol: ""
@@ -28,9 +29,7 @@ blocks:
           fetch_upstream_icon: false
           branch_icon: ""
           branch_identical_icon: ""
-          #branch_ahead_icon: ""
-          #branch_behind_icon: ""
-          #branch_gone_icon: ""
+          branch_gone_icon: ""
       - type: session
         style: powerline
         powerline_symbol: ""
@@ -44,7 +43,7 @@ blocks:
       - type: go
         style: plain
         foreground: lightCyan
-        template: "{{ if not .Error }} {{ .Major }}.{{ .Minor }} {{ end }}"
+        template: "{{ if not .Error }}  {{ .Major }}.{{ .Minor }} {{ end }}"
       - type: python
         style: plain
         foreground: lightGreen
