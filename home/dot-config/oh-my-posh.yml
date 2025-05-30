@@ -1,14 +1,18 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
 version: 3
 final_space: true
+transient_prompt:
+  newline: true
+  template: " {{ .PWD }} <,transparent> "
+  foreground: white
+  background: blue
 blocks:
   - type: prompt
     alignment: left
     newline: true
     segments:
       - type: path
-        style: powerline
-        powerline_symbol: ""
+        style: plain
         leading_powerline_symbol: ""
         foreground: white
         background: blue
@@ -17,8 +21,7 @@ blocks:
           style: powerlevel
           max_width: 40
       - type: git
-        style: powerline
-        powerline_symbol: ""
+        style: plain
         foreground: black
         background: green
         background_templates:
@@ -31,8 +34,7 @@ blocks:
           branch_identical_icon: ""
           branch_gone_icon: ""
       - type: session
-        style: powerline
-        powerline_symbol: ""
+        style: plain
         foreground: white
         background: magenta
         template: "{{ if .SSHSession }} {{ .UserName }}@{{ .HostName }} {{ end }}"
