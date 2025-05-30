@@ -61,8 +61,9 @@ SOFTWARE.
   <style name="selection"                   foreground="crust" background="text"/>
   <style name="cursor"                      foreground="subtext0"/>
   <style name="secondary-cursor"            foreground="subtext1"/>
-  <style name="current-line"                background="text"/>
+  <style name="current-line"                background="crust"/>
   <style name="line-numbers"                foreground="text" background="base"/>
+  <style name="draw-spaces"                 foreground="surface2"/>
   <style name="background-pattern"          background="rosewater"/>
 
   <!-- Bracket Matching -->
