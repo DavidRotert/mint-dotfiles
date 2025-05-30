@@ -61,14 +61,14 @@ SOFTWARE.
   <style name="selection"                   foreground="crust" background="text"/>
   <style name="cursor"                      foreground="subtext0"/>
   <style name="secondary-cursor"            foreground="subtext1"/>
-  <style name="current-line"                background="crust"/>
+  <style name="current-line"                background="mantle"/>
   <style name="line-numbers"                foreground="text" background="base"/>
-  <style name="draw-spaces"                 foreground="surface2"/>
+  <style name="draw-spaces"                 foreground="surface0"/>
   <style name="background-pattern"          background="rosewater"/>
 
   <!-- Bracket Matching -->
-  <style name="bracket-match"               foreground="crust" background="base"/>
-  <style name="bracket-mismatch"            foreground="red" background="base"/>
+  <style name="bracket-match"               foreground="text" background="surface2" bold="true"/>
+  <style name="bracket-mismatch"            foreground="red" background="surface2" bold="true"/>
 
   <!-- Right Margin -->
   <style name="right-margin"                foreground="crust" background="base"/>
