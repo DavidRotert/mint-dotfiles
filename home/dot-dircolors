@@ -1,0 +1,282 @@
+# Configuration file for dircolors, a utility to help you set the
+# LS_COLORS environment variable used by GNU ls with the --color option.
+
+# Copyright (C) 1996-2014 Free Software Foundation, Inc.
+# Copying and distribution of this file, with or without modification,
+# are permitted provided the copyright notice and this notice are preserved.
+
+# The keywords COLOR, OPTIONS, and EIGHTBIT (honored by the
+# slackware version of dircolors) are recognized but ignored.
+
+# You can copy this file to .dir_colors in your $HOME directory to override
+# the system defaults.
+
+# Below, there should be one TERM entry for each termtype that is colorizable
+TERM Eterm
+TERM ansi
+TERM alacritty
+TERM color-xterm
+TERM con132x25
+TERM con132x30
+TERM con132x43
+TERM con132x60
+TERM con80x25
+TERM con80x28
+TERM con80x30
+TERM con80x43
+TERM con80x50
+TERM con80x60
+TERM cons25
+TERM console
+TERM cygwin
+TERM dtterm
+TERM eterm-color
+TERM ghostty
+TERM gnome
+TERM gnome-256color
+TERM hurd
+TERM jfbterm
+TERM konsole
+TERM kterm
+TERM linux
+TERM linux-c
+TERM mach-color
+TERM mach-gnu-color
+TERM mlterm
+TERM putty
+TERM putty-256color
+TERM rxvt
+TERM rxvt-256color
+TERM rxvt-cygwin
+TERM rxvt-cygwin-native
+TERM rxvt-unicode
+TERM rxvt-unicode-256color
+TERM rxvt-unicode256
+TERM screen
+TERM screen-256color
+TERM screen-256color-bce
+TERM screen-bce
+TERM screen-w
+TERM screen.Eterm
+TERM screen.rxvt
+TERM screen.linux
+TERM st
+TERM st-256color
+TERM terminator
+TERM vt100
+TERM xterm
+TERM xterm-16color
+TERM xterm-256color
+TERM xterm-88color
+TERM xterm-color
+TERM xterm-debian
+
+# Below are the color init strings for the basic file types. A color init
+# string consists of one or more of the following numeric codes:
+# Attribute codes:
+# 00=none 01=bold 04=underscore 05=blink 07=reverse 08=concealed
+# Text color codes:
+# 30=black 31=red 32=green 33=yellow 34=blue 35=magenta 36=cyan 37=white
+# Background color codes:
+# 40=black 41=red 42=green 43=yellow 44=blue 45=magenta 46=cyan 47=white
+
+RESET 00
+
+DIR 04;34
+EXEC 04;32
+LINK target
+
+NORMAL 0
+FILE 0
+ORPHAN 04;31
+MISSING 0
+
+FIFO 00;33
+SOCK 04;33
+BLK 00;33
+CHR 00;33
+
+STICKY 0
+STICKY_OTHER_WRITABLE 0
+OTHER_WRITABLE 0
+SUID 04;32
+SGID 04;32
+
+ # archives or compressed
+.tar 04;33
+.tgz 04;33
+.arc 04;33
+.arj 04;33
+.taz 04;33
+.lha 04;33
+.lz4 04;33
+.lzh 04;33
+.lzma 04;33
+.tlz 04;33
+.txz 04;33
+.tzo 04;33
+.t7z 04;33
+.zip 04;33
+.z   04;33
+.Z   04;33
+.dz  04;33
+.gz  04;33
+.lrz 04;33
+.lz  04;33
+.lzo 04;33
+.xz  04;33
+.bz2 04;33
+.bz  04;33
+.tbz 04;33
+.tbz2 04;33
+.tz  04;33
+.deb 04;33
+.rpm 04;33
+.jar 04;33
+.phar 04;33
+.war 04;33
+.ear 04;33
+.sar 04;33
+.rar 04;33
+.alz 04;33
+.ace 04;33
+.zoo 04;33
+.cpio 04;33
+.7z  04;33
+.rz  04;33
+.cab 04;33
+
+# Disk images
+.iso 04;38:5:242
+.raw 04;38:5:242
+.vhd 04;38:5:242
+.vhdx 04;38:5:242
+.vdi 04;38:5:242
+.qcow 04;38:5:242
+.qcow2 04;38:5:242
+
+# Document files
+.pdf 00;38;2;237;27;36
+
+# Word blue
+.docx 00;38;2;39;125;212
+.doc 00;38;2;39;125;212
+.odt 00;38;2;39;125;212
+
+# Excel green
+.xls 00;38;2;33;163;101
+.xlsx 00;38;2;33;163;101
+.ods 00;38;2;33;163;101
+.csv 00;38;2;33;163;101
+
+# PowerPoint orange
+.pptx 00;38;2;237;107;71
+.ppt 00;38;2;237;107;71
+.odp 00;38;2;237;107;71
+
+# Programming language files
+.java 01;38;2;255;0;0
+.py 01;38;2;152;211;92
+.pyw 01;38;2;152;211;92
+.go 01;38;2;26;200;242
+.hs 01;38;2;143;78;139
+.c 01;38;2;208;40;133
+.cc 01;38;2;208;40;133
+.h 01;38;2;208;40;133
+.cpp 01;38;2;208;40;133
+.c++ 01;38;2;208;40;133
+.hpp 01;38;2;208;40;133
+.h++ 01;38;2;208;40;133
+.php 01;38;2;143;78;139
+.phtml 01;38;2;143;78;139
+
+.js 01;38;2;233;201;48
+.mjs 01;38;2;233;201;48
+.ts 01;38;2;48;119;197
+.tsx 01;38;2;48;119;197
+.vue 01;38;2;65;183;131
+.css 01;38;2;60;155;216
+.html 01;38;2;229;77;38
+
+.yml 01;38;2;255;125;127
+.yml 01;38;2;255;125;127
+.json 01;38;2;255;125;127
+.xml 01;38;2;255;125;127
+
+# Configruation file extension
+.ini 00;38;2;183;183;183
+.conf 00;38;2;183;183;183
+.config 00;38;2;183;183;183
+.toml 00;38;2;183;183;183
+.properties 00;38;2;183;183;183
+
+# image formats
+.jpg 00;36
+.jpeg 00;36
+.gif 00;36
+.bmp 00;36
+.pbm 00;36
+.pgm 00;36
+.ppm 00;36
+.tga 00;36
+.xbm 00;36
+.xpm 00;36
+.tif 00;36
+.tiff 00;36
+.png 00;36
+.svg 00;36
+.svgz 00;36
+.mng 00;36
+.pcx 00;36
+.mov 00;36
+.mpg 00;36
+.mpeg 00;36
+.m2v 00;36
+.mkv 00;36
+.webm 00;36
+.ogm 00;36
+.mp4 00;36
+.m4v 00;36
+.mp4v 00;36
+.vob 00;36
+.qt  00;36
+.nuv 00;36
+.wmv 00;36
+.asf 00;36
+.rm  00;36
+.rmvb 00;36
+.flc 00;36
+.avi 00;36
+.fli 00;36
+.flv 00;36
+.gl 00;36
+.dl 00;36
+.xcf 00;36
+.xwd 00;36
+.yuv 00;36
+.cgm 00;36
+.emf 00;36
+# http://wiki.xiph.org/index.php/MIME_Types_and_File_Extensions
+.axv 00;36
+.anx 00;36
+.ogv 00;36
+.ogx 00;36
+
+# audio formats
+.aac 00;35
+.au 00;35
+.flac 00;35
+.m4a 00;35
+.mid 00;35
+.midi 00;35
+.mka 00;35
+.mp3 00;35
+.mpc 00;35
+.ogg 00;35
+.ra 00;35
+.wav 00;35
+# http://wiki.xiph.org/index.php/MIME_Types_and_File_Extensions
+.axa 00;35
+.oga 00;35
+.spx 00;35
+.xspf 00;35

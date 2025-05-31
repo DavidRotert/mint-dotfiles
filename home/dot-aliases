@@ -11,9 +11,6 @@ then
     alias egrep='egrep --color=auto'
 fi
 
-alias lsl="ls -l"
-alias lsla="ls -la"
-
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Systemd aliases
@@ -64,7 +61,5 @@ extract() {
         echo "'$1' is not a valid file"
     fi
 }
-
-alias ls="lsd"
 
 alias tmux-temp-session="tmux new \; set-option destroy-unattached on"
