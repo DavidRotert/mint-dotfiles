@@ -82,7 +82,7 @@ TERM xterm-debian
 
 RESET 00
 
-DIR 04;34
+DIR 04;01;34
 EXEC 04;32
 LINK target
 
@@ -156,23 +156,23 @@ SGID 04;32
 .qcow2 04;38:5:242
 
 # Document files
-.pdf 00;38;2;237;27;36
+.pdf 01;38;2;237;27;36
 
 # Word blue
-.docx 00;38;2;39;125;212
-.doc 00;38;2;39;125;212
-.odt 00;38;2;39;125;212
+.docx 01;38;2;39;125;212
+.doc 01;38;2;39;125;212
+.odt 01;38;2;39;125;212
 
 # Excel green
-.xls 00;38;2;33;163;101
-.xlsx 00;38;2;33;163;101
-.ods 00;38;2;33;163;101
-.csv 00;38;2;33;163;101
+.xls 01;38;2;33;163;101
+.xlsx 01;38;2;33;163;101
+.ods 01;38;2;33;163;101
+.csv 01;38;2;33;163;101
 
 # PowerPoint orange
-.pptx 00;38;2;237;107;71
-.ppt 00;38;2;237;107;71
-.odp 00;38;2;237;107;71
+.pptx 01;38;2;237;107;71
+.ppt 01;38;2;237;107;71
+.odp 01;38;2;237;107;71
 
 # Programming language files
 .java 01;38;2;255;0;0
@@ -211,72 +211,72 @@ SGID 04;32
 .properties 00;38;2;183;183;183
 
 # image formats
-.jpg 00;36
-.jpeg 00;36
-.gif 00;36
-.bmp 00;36
-.pbm 00;36
-.pgm 00;36
-.ppm 00;36
-.tga 00;36
-.xbm 00;36
-.xpm 00;36
-.tif 00;36
-.tiff 00;36
-.png 00;36
-.svg 00;36
-.svgz 00;36
-.mng 00;36
-.pcx 00;36
-.mov 00;36
-.mpg 00;36
-.mpeg 00;36
-.m2v 00;36
-.mkv 00;36
-.webm 00;36
-.ogm 00;36
-.mp4 00;36
-.m4v 00;36
-.mp4v 00;36
-.vob 00;36
-.qt  00;36
-.nuv 00;36
-.wmv 00;36
-.asf 00;36
-.rm  00;36
-.rmvb 00;36
-.flc 00;36
-.avi 00;36
-.fli 00;36
-.flv 00;36
-.gl 00;36
-.dl 00;36
-.xcf 00;36
-.xwd 00;36
-.yuv 00;36
-.cgm 00;36
-.emf 00;36
+.jpg 01;36
+.jpeg 01;36
+.gif 01;36
+.bmp 01;36
+.pbm 01;36
+.pgm 01;36
+.ppm 01;36
+.tga 01;36
+.xbm 01;36
+.xpm 01;36
+.tif 01;36
+.tiff 01;36
+.png 01;36
+.svg 01;36
+.svgz 01;36
+.mng 01;36
+.pcx 01;36
+.mov 01;36
+.mpg 01;36
+.mpeg 01;36
+.m2v 01;36
+.mkv 01;36
+.webm 01;36
+.ogm 01;36
+.mp4 01;36
+.m4v 01;36
+.mp4v 01;36
+.vob 01;36
+.qt  01;36
+.nuv 01;36
+.wmv 01;36
+.asf 01;36
+.rm  01;36
+.rmvb 01;36
+.flc 01;36
+.avi 01;36
+.fli 01;36
+.flv 01;36
+.gl 01;36
+.dl 01;36
+.xcf 01;36
+.xwd 01;36
+.yuv 01;36
+.cgm 01;36
+.emf 01;36
 # http://wiki.xiph.org/index.php/MIME_Types_and_File_Extensions
-.axv 00;36
-.anx 00;36
-.ogv 00;36
-.ogx 00;36
+.axv 01;36
+.anx 01;36
+.ogv 01;36
+.ogx 01;36
 
 # audio formats
-.aac 00;35
-.au 00;35
-.flac 00;35
-.m4a 00;35
-.mid 00;35
-.midi 00;35
-.mka 00;35
-.mp3 00;35
-.mpc 00;35
-.ogg 00;35
-.ra 00;35
-.wav 00;35
+.aac 01;35
+.au 01;35
+.flac 01;35
+.m4a 01;35
+.mid 01;35
+.midi 01;35
+.mka 01;35
+.mp3 01;35
+.mpc 01;35
+.ogg 01;35
+.ra 01;35
+.wav 01;35
 # http://wiki.xiph.org/index.php/MIME_Types_and_File_Extensions
-.axa 00;35
-.oga 00;35
-.spx 00;35
-.xspf 00;35
+.axa 01;35
+.oga 01;35
+.spx 01;35
+.xspf 01;35
