@@ -46,6 +46,7 @@ blocks:
         style: plain
         foreground: lightCyan
         template: "{{ if not .Error }}  {{ .Major }}.{{ .Minor }} {{ end }}"
+        cache_duration: 5m
       - type: python
         style: plain
         foreground: lightGreen
@@ -54,6 +55,7 @@ blocks:
           fetch_virtual_env: true
           fetch_version: true
           show_version: true
+        cache_duration: 5m
       - type: node
         style: plain
         foreground: lightYellow
@@ -62,6 +64,7 @@ blocks:
         style: plain
         lightGreen: lightGreen
         template: "{{ if not .Error }}  {{ .Major }}.{{ .Minor }} {{ end }}"
+        cache_duration: 5m
       - type: executiontime
         style: plain
         foreground: white
