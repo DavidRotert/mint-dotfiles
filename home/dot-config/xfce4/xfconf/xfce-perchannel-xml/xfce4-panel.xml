@@ -17,7 +17,6 @@
       <property name="icon-size" type="uint" value="0"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="13"/>
-        <value type="int" value="10"/>
         <value type="int" value="24"/>
         <value type="int" value="25"/>
         <value type="int" value="8"/>
@@ -143,6 +142,7 @@
         <value type="string" value="redshift"/>
       </property>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="tuxedo-control-center"/>
         <value type="string" value="copyq"/>
         <value type="string" value="uget-gtk"/>
         <value type="string" value="com.cisco.anyconnect.gui"/>
@@ -261,11 +261,7 @@
       <property name="mpris-players" type="string" value="brave.instance19276;chromium.instance4421;firefox.instance104160;firefox.instance19503;firefox.instance31656;firefox.instance3894;firefox.instance44743;firefox.instance5735;firefox.instance62316;firefox.instance7743;firefox.instance_1_122;firefox.instance_1_139;firefox.instance_1_144;firefox.instance_1_153;firefox.instance_1_167;firefox.instance_1_202;firefox.instance_1_227;firefox.instance_1_239;firefox.instance_1_248;firefox.instance_1_262;firefox.instance_1_303;firefox.instance_1_470;firefox.instance_1_474;firefox.instance_1_539;firefox.instance_1_759;firefox.instance_1_919;firefox.instance_1_94;firefox.instance_1_95;io.github.celluloid_player.Celluloid.instance-1;jak-cli.instance78928;rhythmbox;vlc"/>
       <property name="show-notifications" type="bool" value="false"/>
     </property>
-    <property name="plugin-10" type="string" value="launcher">
-      <property name="items" type="array">
-        <value type="string" value="17137150381.desktop"/>
-      </property>
-    </property>
+    <property name="plugin-10" type="empty"/>
     <property name="plugin-11" type="empty"/>
     <property name="plugin-12" type="string" value="separator">
       <property name="enable-keyboard-shortcuts" type="empty"/>
@@ -286,8 +282,17 @@
       <property name="position-categories-alternate" type="bool" value="true"/>
       <property name="menu-width" type="int" value="515"/>
       <property name="favorites" type="array">
+        <value type="string" value="thunar.desktop"/>
+        <value type="string" value="firefox.desktop"/>
+        <value type="string" value="thunderbird.desktop"/>
+        <value type="string" value="xfce4-terminal.desktop"/>
+        <value type="string" value="terminator.desktop"/>
+        <value type="string" value="xfce4-screenshooter.desktop"/>
+        <value type="string" value="Switch theme mode.desktop"/>
       </property>
       <property name="recent" type="array">
+        <value type="string" value="org.xfce.Catfish.desktop"/>
+        <value type="string" value="xfce-keyboard-settings.desktop"/>
         <value type="string" value="xfce-mouse-settings.desktop"/>
         <value type="string" value="Switch theme mode.desktop"/>
         <value type="string" value="mintstick.desktop"/>
@@ -296,6 +301,44 @@
         <value type="string" value="mintsources.desktop"/>
       </property>
       <property name="menu-opacity" type="int" value="100"/>
+      <property name="search-actions" type="int" value="6">
+        <property name="action-0" type="empty">
+          <property name="name" type="string" value="Handbuchseiten"/>
+          <property name="pattern" type="string" value=":man "/>
+          <property name="command" type="string" value="exo-open --launch TerminalEmulator man %s"/>
+          <property name="regex" type="bool" value="false"/>
+        </property>
+        <property name="action-1" type="empty">
+          <property name="name" type="string" value="Das Web durchsuchen"/>
+          <property name="pattern" type="string" value=":web "/>
+          <property name="command" type="string" value="exo-open --launch WebBrowser https://duckduckgo.com/?q=%u"/>
+          <property name="regex" type="bool" value="false"/>
+        </property>
+        <property name="action-2" type="empty">
+          <property name="name" type="string" value="Nach Dateien suchen"/>
+          <property name="pattern" type="string" value=":search "/>
+          <property name="command" type="string" value="catfish --path=~ --start %s"/>
+          <property name="regex" type="bool" value="false"/>
+        </property>
+        <property name="action-3" type="empty">
+          <property name="name" type="string" value="Im Terminal ausführen"/>
+          <property name="pattern" type="string" value=":run "/>
+          <property name="command" type="string" value="exo-open --launch TerminalEmulator %s"/>
+          <property name="regex" type="bool" value="false"/>
+        </property>
+        <property name="action-4" type="empty">
+          <property name="name" type="string" value="Adresse öffnen"/>
+          <property name="pattern" type="string" value="^(file|http|https):\/\/(.*)$"/>
+          <property name="command" type="string" value="exo-open \0"/>
+          <property name="regex" type="bool" value="true"/>
+        </property>
+        <property name="action-5" type="empty">
+          <property name="name" type="string" value="Datei öffnen"/>
+          <property name="pattern" type="string" value="^/.*$"/>
+          <property name="command" type="string" value="exo-open \0"/>
+          <property name="regex" type="bool" value="true"/>
+        </property>
+      </property>
     </property>
     <property name="plugin-14" type="string" value="notification-plugin"/>
     <property name="clipman" type="empty">
