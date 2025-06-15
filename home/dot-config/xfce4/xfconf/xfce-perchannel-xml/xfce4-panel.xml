@@ -10,7 +10,7 @@
       <property name="length" type="double" value="1"/>
       <property name="position-locked" type="bool" value="true"/>
       <property name="size" type="uint" value="54"/>
-      <property name="background-style" type="uint" value="1"/>
+      <property name="background-style" type="uint" value="0"/>
       <property name="background-alpha" type="empty"/>
       <property name="enter-opacity" type="empty"/>
       <property name="leave-opacity" type="empty"/>
@@ -30,7 +30,7 @@
         <value type="double" value="0.94509803921568625"/>
         <value type="double" value="0.94509803921568625"/>
         <value type="double" value="0.94509803921568625"/>
-        <value type="double" value="0.19148936170212766"/>
+        <value type="double" value="0"/>
       </property>
     </property>
     <property name="dark-mode" type="bool" value="false"/>
