@@ -10,7 +10,7 @@
       <property name="length" type="double" value="1"/>
       <property name="position-locked" type="bool" value="true"/>
       <property name="size" type="uint" value="54"/>
-      <property name="background-style" type="empty"/>
+      <property name="background-style" type="uint" value="1"/>
       <property name="background-alpha" type="empty"/>
       <property name="enter-opacity" type="empty"/>
       <property name="leave-opacity" type="empty"/>
@@ -26,15 +26,21 @@
       </property>
       <property name="output-name" type="string" value="Primary"/>
       <property name="autohide-behavior" type="uint" value="0"/>
+      <property name="background-rgba" type="array">
+        <value type="double" value="0.94509803921568625"/>
+        <value type="double" value="0.94509803921568625"/>
+        <value type="double" value="0.94509803921568625"/>
+        <value type="double" value="0.19148936170212766"/>
+      </property>
     </property>
     <property name="dark-mode" type="bool" value="false"/>
     <property name="panel-0" type="empty">
       <property name="autohide-behavior" type="uint" value="0"/>
       <property name="background-rgba" type="array">
-        <value type="double" value="0.90980392156862744"/>
-        <value type="double" value="0.90980392156862744"/>
-        <value type="double" value="0.90980392156862744"/>
-        <value type="double" value="1"/>
+        <value type="double" value="0.94509803921568625"/>
+        <value type="double" value="0.94509803921568625"/>
+        <value type="double" value="0.94509803921568625"/>
+        <value type="double" value="0.63475177304964536"/>
       </property>
       <property name="background-style" type="uint" value="0"/>
       <property name="enable-struts" type="bool" value="true"/>
@@ -46,6 +52,11 @@
       <property name="mode" type="uint" value="0"/>
       <property name="output-name" type="string" value="Primary"/>
       <property name="plugin-ids" type="array">
+        <value type="int" value="4"/>
+        <value type="int" value="16"/>
+        <value type="int" value="20"/>
+        <value type="int" value="15"/>
+        <value type="int" value="18"/>
         <value type="int" value="21"/>
         <value type="int" value="6"/>
         <value type="int" value="3"/>
@@ -53,14 +64,9 @@
         <value type="int" value="12"/>
         <value type="int" value="22"/>
         <value type="int" value="9"/>
-        <value type="int" value="15"/>
-        <value type="int" value="20"/>
-        <value type="int" value="16"/>
-        <value type="int" value="18"/>
         <value type="int" value="1"/>
         <value type="int" value="7"/>
         <value type="int" value="19"/>
-        <value type="int" value="4"/>
       </property>
       <property name="position" type="string" value="p=9;x=3202;y=14"/>
       <property name="position-locked" type="bool" value="true"/>
@@ -285,13 +291,8 @@
         <value type="string" value="Switch theme mode.desktop"/>
         <value type="string" value="mintstick.desktop"/>
         <value type="string" value="transmission-gtk.desktop"/>
-        <value type="string" value="Zed.desktop"/>
-        <value type="string" value="Bruno.desktop"/>
-        <value type="string" value="install4j_h0z7la-SoapUI-5.8.0.desktop"/>
         <value type="string" value="xfce4-appfinder.desktop"/>
         <value type="string" value="mintsources.desktop"/>
-        <value type="string" value="nvim-qt.desktop"/>
-        <value type="string" value="brave-browser.desktop"/>
       </property>
       <property name="menu-opacity" type="int" value="100"/>
     </property>
@@ -314,7 +315,7 @@
     </property>
     <property name="plugin-16" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
-      <property name="expand" type="bool" value="false"/>
+      <property name="expand" type="bool" value="true"/>
     </property>
     <property name="plugin-18" type="string" value="datetime"/>
     <property name="plugin-19" type="string" value="separator">
