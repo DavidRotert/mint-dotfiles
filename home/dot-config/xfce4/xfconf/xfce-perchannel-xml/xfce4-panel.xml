@@ -288,6 +288,7 @@
       <property name="favorites" type="array">
       </property>
       <property name="recent" type="array">
+        <value type="string" value="xfce-mouse-settings.desktop"/>
         <value type="string" value="Switch theme mode.desktop"/>
         <value type="string" value="mintstick.desktop"/>
         <value type="string" value="transmission-gtk.desktop"/>
