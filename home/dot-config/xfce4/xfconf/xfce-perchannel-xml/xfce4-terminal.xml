@@ -55,4 +55,5 @@
   <property name="dropdown-always-show-tabs" type="bool" value="false"/>
   <property name="encoding" type="string" value=""/>
   <property name="dropdown-height" type="uint" value="35"/>
+  <property name="scrolling-lines" type="uint" value="10000"/>
 </channel>

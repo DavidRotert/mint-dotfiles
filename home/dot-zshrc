@@ -28,8 +28,8 @@ setopt correct_all
 
 # History configuration
 HISTFILE="$HOME/.zsh_history"
-HISTSIZE=1000
-SAVEHIST=2000
+HISTSIZE=10000
+SAVEHIST=10000
 
 ## History command configuration
 setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
