@@ -57,7 +57,7 @@
       <property name="&lt;Super&gt;c" type="string" value="gnome-calculator"/>
       <property name="&lt;Super&gt;b" type="string" value="exo-open --launch WebBrowser"/>
       <property name="&lt;Primary&gt;Escape" type="string" value="xfce4-popup-whiskermenu"/>
-      <property name="&lt;Super&gt;a" type="string" value="xfce4-appfinder"/>
+      <property name="&lt;Super&gt;space" type="string" value="xfce4-appfinder"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
