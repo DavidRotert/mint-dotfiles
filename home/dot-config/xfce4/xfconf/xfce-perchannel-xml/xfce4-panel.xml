@@ -52,9 +52,9 @@
       <property name="output-name" type="string" value="Primary"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="4"/>
-        <value type="int" value="16"/>
-        <value type="int" value="20"/>
         <value type="int" value="15"/>
+        <value type="int" value="20"/>
+        <value type="int" value="16"/>
         <value type="int" value="18"/>
         <value type="int" value="21"/>
         <value type="int" value="6"/>
@@ -291,14 +291,16 @@
         <value type="string" value="Switch theme mode.desktop"/>
       </property>
       <property name="recent" type="array">
-        <value type="string" value="org.xfce.Catfish.desktop"/>
+        <value type="string" value="code.desktop"/>
+        <value type="string" value="jetbrains-phpstorm-d2ceef88-ddd9-43ef-9658-4581aaffcd7e.desktop"/>
+        <value type="string" value="ApacheDirectoryStudio.desktop"/>
+        <value type="string" value="firefox.desktop"/>
+        <value type="string" value="discord.desktop"/>
+        <value type="string" value="dbeaver-ce.desktop"/>
+        <value type="string" value="Zoom.desktop"/>
+        <value type="string" value="xfce-wm-settings.desktop"/>
         <value type="string" value="xfce-keyboard-settings.desktop"/>
-        <value type="string" value="xfce-mouse-settings.desktop"/>
-        <value type="string" value="Switch theme mode.desktop"/>
-        <value type="string" value="mintstick.desktop"/>
-        <value type="string" value="transmission-gtk.desktop"/>
-        <value type="string" value="xfce4-appfinder.desktop"/>
-        <value type="string" value="mintsources.desktop"/>
+        <value type="string" value="org.xfce.Catfish.desktop"/>
       </property>
       <property name="menu-opacity" type="int" value="100"/>
       <property name="search-actions" type="int" value="6">
@@ -356,10 +358,11 @@
     </property>
     <property name="plugin-15" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
+      <property name="expand" type="bool" value="true"/>
     </property>
     <property name="plugin-16" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
-      <property name="expand" type="bool" value="true"/>
+      <property name="expand" type="bool" value="false"/>
     </property>
     <property name="plugin-18" type="string" value="datetime"/>
     <property name="plugin-19" type="string" value="separator">
