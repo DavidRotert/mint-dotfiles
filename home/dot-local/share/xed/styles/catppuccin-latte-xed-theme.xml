@@ -63,7 +63,7 @@ SOFTWARE.
   <style name="secondary-cursor"            foreground="subtext1"/>
   <style name="current-line"                background="mantle"/>
   <style name="line-numbers"                foreground="text" background="base"/>
-  <style name="draw-spaces"                 foreground="surface0"/>
+  <style name="draw-spaces"                 foreground="surface2"/>
   <style name="background-pattern"          background="rosewater"/>
 
   <!-- Bracket Matching -->
