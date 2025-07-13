@@ -9,7 +9,7 @@
     cursor_bg_color = "#f6f5f4"
     font = JetBrainsMonoNL Nerd Font 10
     foreground_color = "#f6f5f4"
-    scrollback_lines = 1000
+    scrollback_lines = 10000
     palette = "#232323:#ff000f:#8ce10b:#ffb900:#008df8:#6d43a6:#00d8eb:#ffffff:#444444:#ff2740:#abe15b:#ffd242:#0092ff:#9a5feb:#67fff0:#ffffff"
     use_custom_command = True
     custom_command = zsh
