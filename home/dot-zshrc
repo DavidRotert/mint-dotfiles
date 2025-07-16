@@ -5,6 +5,8 @@ source_if_exists() {
     fi
 }
 
+WORDCHARS='*?[]~=&;!#$%^(){}<>'
+
 # ZSH built in autocomplete
 autoload -Uz compinit
 compinit
