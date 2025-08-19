@@ -6,7 +6,7 @@ mojave_gtk_theme_tag="2024-11-15"
 whitesur_icon_theme_tag="2025-08-02"
 jetbrains_mono_version="2.304"
 jetbrains_mono_nerdfont_version="v3.4.0"
-oh_my_posh_version="26.19.1"
+oh_my_posh_version="v26.19.1"
 
 set -euo pipefail
 
@@ -16,11 +16,8 @@ sudo apt install wget unzip git
 echo "=== Install ZSH and shells"
 sudo apt install tmux zsh zsh-syntax-highlighting zsh-autosuggestions terminator lsd fzf zoxide
 
-if [ ! -e /usr/local/bin/oh-my-posh ]
-then
-    sudo wget -O /usr/local/bin/oh-my-posh "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/$oh_my_posh_version/posh-linux-amd64"
-    sudo chmod +x /usr/local/bin/oh-my-posh
-fi
+sudo wget -O /usr/local/bin/oh-my-posh "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/$oh_my_posh_version/posh-linux-amd64"
+sudo chmod +x /usr/local/bin/oh-my-posh
 
 echo "=== Download and install GTK themes"
 sudo apt install gtk2-engines-murrine gtk2-engines-pixbuf sassc optipng inkscape libglib2.0-dev-bin
