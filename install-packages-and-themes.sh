@@ -58,4 +58,4 @@ wget -O /tmp/jetbrains-mono-nerdfont.zip "https://github.com/ryanoasis/nerd-font
 sudo unzip -o /tmp/jetbrains-mono-nerdfont.zip -d /usr/local/share/fonts > /dev/null
 
 echo "=== Install software"
-sudo apt install xcape vlc copyq variety
+sudo apt install xcape vlc copyq variety color-picker
