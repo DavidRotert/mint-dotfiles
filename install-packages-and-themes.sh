@@ -2,8 +2,9 @@
 
 script_dir="$(dirname "$(readlink -f "$0")")"
 
-mojave_gtk_theme_tag="2024-11-15"
-whitesur_icon_theme_tag="2025-08-02"
+fastfetch_version="2.50.2"
+mojave_gtk_theme_version="2024-11-15"
+whitesur_icon_theme_version="2025-08-02"
 jetbrains_mono_version="2.304"
 jetbrains_mono_nerdfont_version="v3.4.0"
 oh_my_posh_version="v26.19.1"
@@ -19,19 +20,23 @@ sudo apt install tmux zsh zsh-syntax-highlighting zsh-autosuggestions terminator
 sudo wget -O /usr/local/bin/oh-my-posh "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/$oh_my_posh_version/posh-linux-amd64"
 sudo chmod +x /usr/local/bin/oh-my-posh
 
+wget -O /tmp/fastfetch.deb "https://github.com/fastfetch-cli/fastfetch/releases/download/$fastfetch_version/fastfetch-linux-amd64.deb"
+sudo apt install /tmp/fastfetch.deb
+sudo apt remove neofetch
+
 echo "=== Download and install GTK themes"
 sudo apt install gtk2-engines-murrine gtk2-engines-pixbuf sassc optipng inkscape libglib2.0-dev-bin
 
-wget -O /tmp/Mojave-gtk-theme.zip "https://github.com/vinceliuice/Mojave-gtk-theme/archive/refs/tags/$mojave_gtk_theme_tag.zip"
+wget -O /tmp/Mojave-gtk-theme.zip "https://github.com/vinceliuice/Mojave-gtk-theme/archive/refs/tags/$mojave_gtk_theme_version.zip"
 unzip -o /tmp/Mojave-gtk-theme.zip -d /tmp > /dev/null
-cd "/tmp/Mojave-gtk-theme-$mojave_gtk_theme_tag"
+cd "/tmp/Mojave-gtk-theme-$mojave_gtk_theme_version"
 sudo ./install.sh --libadwaita --theme all
 
 echo "=== Download and install icon themes"
 sudo apt install papirus-icon-theme
-wget -O /tmp/WhiteSur-icon-theme.zip "https://github.com/vinceliuice/WhiteSur-icon-theme/archive/refs/tags/$whitesur_icon_theme_tag.zip"
+wget -O /tmp/WhiteSur-icon-theme.zip "https://github.com/vinceliuice/WhiteSur-icon-theme/archive/refs/tags/$whitesur_icon_theme_version.zip"
 unzip -o /tmp/WhiteSur-icon-theme.zip -d /tmp  > /dev/null
-cd "/tmp/WhiteSur-icon-theme-$whitesur_icon_theme_tag"
+cd "/tmp/WhiteSur-icon-theme-$whitesur_icon_theme_version"
 sudo ./install.sh --theme all
 sudo sed -i 's/Inherits=.*/Inherits=Papirus-Light,hicolor/g' "/usr/share/icons/WhiteSur-light/index.theme"
 sudo sed -i 's/Inherits=.*/Inherits=Papirus-Dark,hicolor/g' "/usr/share/icons/WhiteSur-dark/index.theme"
