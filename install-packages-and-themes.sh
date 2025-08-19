@@ -3,10 +3,10 @@
 script_dir="$(dirname "$(readlink -f "$0")")"
 
 mojave_gtk_theme_tag="2024-11-15"
-whitesur_icon_theme_tag="2025-02-10"
+whitesur_icon_theme_tag="2025-08-02"
 jetbrains_mono_version="2.304"
-jetbrains_mono_nerdfont_version="3.3.0"
-oh_my_posh_version="25.23.3"
+jetbrains_mono_nerdfont_version="v3.4.0"
+oh_my_posh_version="26.19.1"
 
 set -euo pipefail
 
@@ -18,7 +18,7 @@ sudo apt install tmux zsh zsh-syntax-highlighting zsh-autosuggestions terminator
 
 if [ ! -e /usr/local/bin/oh-my-posh ]
 then
-    sudo wget -O /usr/local/bin/oh-my-posh "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v$oh_my_posh_version/posh-linux-amd64"
+    sudo wget -O /usr/local/bin/oh-my-posh "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/$oh_my_posh_version/posh-linux-amd64"
     sudo chmod +x /usr/local/bin/oh-my-posh
 fi
 
@@ -32,7 +32,7 @@ sudo ./install.sh --libadwaita --theme all
 
 echo "=== Download and install icon themes"
 sudo apt install papirus-icon-theme
-wget -O /tmp/WhiteSur-icon-theme.zip "https://github.com/vinceliuice/WhiteSur-icon-theme/archive/refs/tags/v$whitesur_icon_theme_tag.zip"
+wget -O /tmp/WhiteSur-icon-theme.zip "https://github.com/vinceliuice/WhiteSur-icon-theme/archive/refs/tags/$whitesur_icon_theme_tag.zip"
 unzip -o /tmp/WhiteSur-icon-theme.zip -d /tmp  > /dev/null
 cd "/tmp/WhiteSur-icon-theme-$whitesur_icon_theme_tag"
 sudo ./install.sh --theme all
@@ -52,7 +52,7 @@ mkdir -p /usr/local/share/fonts
 wget -O /tmp/jetbrains-mono.zip "https://download.jetbrains.com/fonts/JetBrainsMono-$jetbrains_mono_version.zip"
 sudo unzip -jo /tmp/jetbrains-mono.zip -d /usr/local/share/fonts "fonts/ttf/*" > /dev/null
 
-wget -O /tmp/jetbrains-mono-nerdfont.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/v$jetbrains_mono_nerdfont_version/JetBrainsMono.zip"
+wget -O /tmp/jetbrains-mono-nerdfont.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/$jetbrains_mono_nerdfont_version/JetBrainsMono.zip"
 sudo unzip -o /tmp/jetbrains-mono-nerdfont.zip -d /usr/local/share/fonts > /dev/null
 
 echo "=== Install software"
