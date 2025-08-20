@@ -30,7 +30,7 @@ sudo apt install gtk2-engines-murrine gtk2-engines-pixbuf sassc optipng inkscape
 wget -O /tmp/Mojave-gtk-theme.zip "https://github.com/vinceliuice/Mojave-gtk-theme/archive/refs/tags/$mojave_gtk_theme_version.zip"
 unzip -o /tmp/Mojave-gtk-theme.zip -d /tmp > /dev/null
 cd "/tmp/Mojave-gtk-theme-$mojave_gtk_theme_version"
-sudo ./install.sh --libadwaita --theme all
+sudo ./install.sh --libadwaita --theme all --opacity standard --alt standard
 
 echo "=== Download and install icon themes"
 sudo apt install papirus-icon-theme
