@@ -14,7 +14,7 @@ set -euo pipefail
 echo "=== Install dependencies"
 sudo apt install wget unzip git
 
-echo "=== Install ZSH and shells"
+echo "=== Install ZSH and shell tools"
 sudo apt install \
     tmux \
     zsh \
@@ -23,7 +23,8 @@ sudo apt install \
     terminator \
     lsd \
     fzf \
-    zoxide
+    zoxide \
+    neovim
 
 sudo wget -O /usr/local/bin/oh-my-posh "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/$oh_my_posh_version/posh-linux-amd64"
 sudo chmod +x /usr/local/bin/oh-my-posh
@@ -65,7 +66,7 @@ sudo unzip -jo /tmp/jetbrains-mono.zip -d /usr/local/share/fonts "fonts/ttf/*" >
 wget -O /tmp/jetbrains-mono-nerdfont.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/$jetbrains_mono_nerdfont_version/JetBrainsMono.zip"
 sudo unzip -o /tmp/jetbrains-mono-nerdfont.zip -d /usr/local/share/fonts > /dev/null
 
-echo "=== Install software"
+echo "=== Install base software"
 sudo apt install \
     xcape \
     qt5ct \
