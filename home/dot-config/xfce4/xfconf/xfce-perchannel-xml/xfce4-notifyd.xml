@@ -14,6 +14,7 @@
       <value type="string" value="chromium-browser"/>
       <value type="string" value="cloud-drive-ui"/>
       <value type="string" value="com.cisco.anyconnect.gui"/>
+      <value type="string" value="com.cisco.secureclient.gui"/>
       <value type="string" value="com.github.hluk.copyq"/>
       <value type="string" value="discord"/>
       <value type="string" value="Firefox"/>

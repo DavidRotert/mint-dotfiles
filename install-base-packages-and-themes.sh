@@ -2,12 +2,12 @@
 
 script_dir="$(dirname "$(readlink -f "$0")")"
 
-fastfetch_version="2.50.2"
+fastfetch_version="2.51.1"
 mojave_gtk_theme_version="2024-11-15"
 whitesur_icon_theme_version="2025-08-02"
 jetbrains_mono_version="2.304"
 jetbrains_mono_nerdfont_version="v3.4.0"
-oh_my_posh_version="v26.19.1"
+oh_my_posh_version="v26.20.1"
 
 set -euo pipefail
 
@@ -15,7 +15,15 @@ echo "=== Install dependencies"
 sudo apt install wget unzip git
 
 echo "=== Install ZSH and shells"
-sudo apt install tmux zsh zsh-syntax-highlighting zsh-autosuggestions terminator lsd fzf zoxide
+sudo apt install \
+    tmux \
+    zsh \
+    zsh-syntax-highlighting \
+    zsh-autosuggestions \
+    terminator \
+    lsd \
+    fzf \
+    zoxide
 
 sudo wget -O /usr/local/bin/oh-my-posh "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/$oh_my_posh_version/posh-linux-amd64"
 sudo chmod +x /usr/local/bin/oh-my-posh
@@ -58,4 +66,7 @@ wget -O /tmp/jetbrains-mono-nerdfont.zip "https://github.com/ryanoasis/nerd-font
 sudo unzip -o /tmp/jetbrains-mono-nerdfont.zip -d /usr/local/share/fonts > /dev/null
 
 echo "=== Install software"
-sudo apt install xcape vlc copyq variety color-picker
+sudo apt install \
+    xcape \
+    qt5ct \
+    qt6ct
