@@ -1,11 +1,16 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
 version: 3
+
 final_space: true
+shell_integration: true
+enable_cursor_positioning: true
+
 transient_prompt:
   newline: true
   template: " {{ .PWD }} <,transparent> "
   foreground: white
   background: blue
+
 blocks:
   - type: prompt
     alignment: left
@@ -38,7 +43,6 @@ blocks:
         foreground: white
         background: magenta
         template: "{{ if .SSHSession }} {{ .UserName }}@{{ .HostName }} {{ end }}"
-
   - type: prompt
     alignment: left
     segments:
@@ -70,8 +74,6 @@ blocks:
         foreground: white
         properties:
           threshold: 100
-
-
   - type: prompt
     alignment: left
     newline: true
