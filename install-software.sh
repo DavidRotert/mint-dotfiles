@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Install tools
+sudo apt install \
+    openjdk-21-jre \
+    shellcheck
+
 # Install Podman
 sudo apt install \
     podman \
