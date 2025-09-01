@@ -109,6 +109,7 @@
       <property name="hide-new-items" type="bool" value="false"/>
       <property name="icon-size" type="int" value="0"/>
       <property name="known-items" type="array">
+        <value type="string" value="Nextcloud"/>
         <value type="string" value="XtwqV85Eqj"/>
         <value type="string" value="opensnitch-ui"/>
         <value type="string" value="jetbrains-toolbox"/>
@@ -142,6 +143,7 @@
         <value type="string" value="redshift"/>
       </property>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="nextcloud"/>
         <value type="string" value="com.cisco.secureclient.gui"/>
         <value type="string" value="tuxedo-control-center"/>
         <value type="string" value="copyq"/>
@@ -292,16 +294,16 @@
         <value type="string" value="Switch theme mode.desktop"/>
       </property>
       <property name="recent" type="array">
-        <value type="string" value="Yaak.desktop"/>
-        <value type="string" value="Obsidian.desktop"/>
-        <value type="string" value="jetbrains-toolbox.desktop"/>
-        <value type="string" value="org.gnome.Rhythmbox3.desktop"/>
+        <value type="string" value="ApacheDirectoryStudio.desktop"/>
+        <value type="string" value="org.x.editor.desktop"/>
+        <value type="string" value="dbeaver-ce.desktop"/>
+        <value type="string" value="code.desktop"/>
+        <value type="string" value="jetbrains-phpstorm-d85e0ca3-6795-48a3-8017-283b0bdb09d7.desktop"/>
+        <value type="string" value="Zoom.desktop"/>
+        <value type="string" value="gufw.desktop"/>
+        <value type="string" value="WebApp-Teams8714.desktop"/>
+        <value type="string" value="org.gnome.SoundRecorder.desktop"/>
         <value type="string" value="org.gnome.Cheese.desktop"/>
-        <value type="string" value="xfce-ui-settings.desktop"/>
-        <value type="string" value="htop.desktop"/>
-        <value type="string" value="color-picker.desktop"/>
-        <value type="string" value="qt6ct.desktop"/>
-        <value type="string" value="Switch theme mode.desktop"/>
       </property>
       <property name="menu-opacity" type="int" value="100"/>
       <property name="search-actions" type="int" value="6">
@@ -325,8 +327,8 @@
         </property>
         <property name="action-3" type="empty">
           <property name="name" type="string" value="Im Terminal ausführen"/>
-          <property name="pattern" type="string" value=":run "/>
-          <property name="command" type="string" value="exo-open --launch TerminalEmulator %s"/>
+          <property name="pattern" type="string" value="&gt; "/>
+          <property name="command" type="string" value="exo-open --launch TerminalEmulator bash -i -c &apos;%s; echo Press enter ...;read&apos;"/>
           <property name="regex" type="bool" value="false"/>
         </property>
         <property name="action-4" type="empty">
