@@ -26,7 +26,7 @@ docker_config="$(cat <<EOF
 EOF
 )"
 sudo mkdir -p /etc/docker
-echo "$docker_config" | sudo tee > /etc/docker/daemon.json
+echo "$docker_config" | sudo tee /etc/docker/daemon.json
 dockerd-rootless-setuptool.sh install
 docker_rootless_config="$(cat <<EOF
 {
@@ -40,7 +40,7 @@ docker_rootless_config="$(cat <<EOF
 EOF
 )"
 sudo mkdir -p "$HOME/.config/docker"
-echo "$docker_rootless_config" | sudo tee > "$HOME/.config/docker/daemon.json"
+echo "$docker_rootless_config" > "$HOME/.config/docker/daemon.json"
 
 # Install virtualization tools
 sudo apt install virt-manager
