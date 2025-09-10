@@ -44,7 +44,7 @@ docker_rootless_config="$(cat <<EOF
 }
 EOF
 )"
-sudo mkdir -p "$HOME/.config/docker"
+mkdir -p "$HOME/.config/docker"
 echo "$docker_rootless_config" > "$HOME/.config/docker/daemon.json"
 
 # Install virtualization tools
