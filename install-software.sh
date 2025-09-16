@@ -56,7 +56,9 @@ sudo apt install \
     variety \
     color-picker \
     gnome-characters \
+    gnome-firmware \
     vlc \
     gimp \
     remmina \
-    nextcloud-desktop
+    nextcloud-desktop \
+    terminator

@@ -20,7 +20,6 @@ sudo apt install \
     zsh \
     zsh-syntax-highlighting \
     zsh-autosuggestions \
-    terminator \
     lsd \
     fzf \
     zoxide \
