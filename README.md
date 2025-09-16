@@ -1,7 +1,10 @@
-# My dotfile and system configuration
+# My dotfiles and system configuration
 
 If you install the dotfiles for the first time, run
 ```
-./install-packages-and-themes.sh
-./symlinker.py home
+./install-shells.sh
+./install-base-packages-and-themes.sh
+./install-software.sh
+
+./symlink.sh
 ```

@@ -1,9 +1,10 @@
 #!/bin/bash
 
-# Install tools
+# Install dev tools
 sudo apt install \
-    openjdk-21-jre \
-    shellcheck
+    openjdk-21-jdk \
+    shellcheck \
+    python3-venv
 
 # Install Podman
 sudo apt install \
