@@ -44,10 +44,10 @@ def main(argv: list):
     if len(argv) < 2:
         print("Usage: symlinker.py <package>")
         exit(1)
-    
+
     target_path = os.path.expanduser("~")
     for package_path in argv[1:]:
-        package_path = os.path.realpath(argv[1])
+        package_path = os.path.realpath(package_path)
         link_package(package_path, target_path)
 
 
