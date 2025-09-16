@@ -41,24 +41,24 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-__FG_BLACK="$(tput setaf 0)"
-__FG_RED="$(tput setaf 1)"
-__FG_GREEN="$(tput setaf 2)"
-__FG_YELLOW="$(tput setaf 3)"
-__FG_BLUE="$(tput setaf 4)"
-__FG_PURPLE="$(tput setaf 5)"
-__FG_CYAN="$(tput setaf 6)"
-__FG_GREY="$(tput setaf 7)"
-__BG_BLACK="$(tput setab 0)"
-__BG_RED="$(tput setab 1)"
-__BG_GREEN="$(tput setab 2)"
-__BG_YELLOW="$(tput setab 3)"
-__BG_BLUE="$(tput setab 4)"
-__BG_PURPLE="$(tput setab 5)"
-__BG_CYAN="$(tput setab 6)"
-__BG_GREY="$(tput setab 7)"
-__RESET="$(tput sgr0)"
-__BOLD="$(tput bold)"
+__FG_BLACK="$(tput setaf 0 2>/dev/null)"
+__FG_RED="$(tput setaf 1 2>/dev/null)"
+__FG_GREEN="$(tput setaf 2 2>/dev/null)"
+__FG_YELLOW="$(tput setaf 3 2>/dev/null)"
+__FG_BLUE="$(tput setaf 4 2>/dev/null)"
+__FG_PURPLE="$(tput setaf 5 2>/dev/null)"
+__FG_CYAN="$(tput setaf 6 2>/dev/null)"
+__FG_GREY="$(tput setaf 7 2>/dev/null)"
+__BG_BLACK="$(tput setab 0 2>/dev/null)"
+__BG_RED="$(tput setab 1 2>/dev/null)"
+__BG_GREEN="$(tput setab 2 2>/dev/null)"
+__BG_YELLOW="$(tput setab 3 2>/dev/null)"
+__BG_BLUE="$(tput setab 4 2>/dev/null)"
+__BG_PURPLE="$(tput setab 5 2>/dev/null)"
+__BG_CYAN="$(tput setab 6 2>/dev/null)"
+__BG_GREY="$(tput setab 7 2>/dev/null)"
+__RESET="$(tput sgr0 2>/dev/null)"
+__BOLD="$(tput bold 2>/dev/null)"
 # escape caracters for echoing with colors in functions for PS1 https://stackoverflow.com/questions/6592077/bash-prompt-and-echoing-colors-inside-a-function
 __ESC_START="\001"
 __ESC_END="\002"
@@ -75,9 +75,9 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-if [ "$color_support" = true ]
+if [ "$color_support" = true ] && command -v oh-my-posh &>/dev/null 
 then
-    eval "$(oh-my-posh init bash --config ~/.config/oh-my-posh.yml)"
+    eval "$(oh-my-posh init bash --config "$HOME/.config/oh-my-posh.yml")"
 else
     PS1="\n[ ${debian_chroot:+($debian_chroot)}\w ]\n$ "
 fi
