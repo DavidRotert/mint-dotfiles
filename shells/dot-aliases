@@ -13,33 +13,6 @@ fi
 
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# Systemd aliases
-alias srvstatus='sudo systemctl status'
-alias srvstat='srvstatus'
-alias status='srvstatus'
-
-alias srvstart='sudo systemctl start'
-alias start='srvstart'
-
-alias srvstop='sudo systemctl stop'
-alias stop='srvstop'
-
-alias srvrestart='sudo systemctl restart'
-alias srvrstart='srvrestart'
-alias restart='srvrestart'
-
-alias srvreload='sudo systemctl reload'
-alias srvrel='srvreload'
-alias reload='srvreload'
-
-alias srvdisable='sudo systemctl disable'
-alias srvdis='srvdisable'
-alias disable='srvdisable'
-
-alias srvenable='sudo systemctl enable'
-alias srven='srvenable'
-alias enable='srvenable'
-
 extract() {
     if [ -f $1 ]
     then
