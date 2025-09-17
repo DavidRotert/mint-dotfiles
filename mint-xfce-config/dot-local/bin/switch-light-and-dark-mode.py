@@ -5,6 +5,15 @@ import re, subprocess, os, time
 def cmd(cmd: list):
     return subprocess.run(cmd, capture_output=True, text=True).stdout.rstrip("\n")
 
+def get_dconf(key: str):
+    return cmd(["dconf", "read", key])
+
+def set_dconf(key: str, value: str):
+    return cmd(["dconf", "write", key, value])
+    
+def reset_dconf(key: str):
+    return cmd(["dconf", "reset", key])
+
 def get_xfconf_setting(channel: str, property: str):
     return cmd(["xfconf-query", "--channel", channel, "--property", property])
 
@@ -58,6 +67,13 @@ def toggle_setting_in_ini(setting, settings_file):
     else:
         print(f"Could not change {setting}")
 
+def toggle_gnome_color_scheme():
+    current_color_scheme = get_dconf("/org/gnome/desktop/interface/color-scheme")
+    if current_color_scheme == "'prefer-dark'":
+        reset_dconf("/org/gnome/desktop/interface/color-scheme")
+    else:
+        set_dconf("/org/gnome/desktop/interface/color-scheme", "'prefer-dark'")
+
 def toggle_kvantum_theme():
     kvantum_settings = os.path.join(os.path.expanduser("~"), ".config/Kvantum/kvantum.kvconfig")
     toggle_setting_in_ini("theme", kvantum_settings)
@@ -69,12 +85,12 @@ def toggle_qt_theme():
     toggle_setting_in_ini("icon_theme", qt5ct_config)
 
 def toggle_xed_theme():
-    xed_theme = cmd(["dconf", "read", "/org/x/editor/preferences/editor/scheme"]).strip("'")
+    xed_theme = get_dconf("/org/x/editor/preferences/editor/scheme")
     translations = {
-        "catppuccin-macchiato": "catppuccin-latte",
-        "catppuccin-latte": "catppuccin-macchiato"
+        "'catppuccin-macchiato'": "'catppuccin-latte'",
+        "'catppuccin-latte'": "'catppuccin-macchiato'"
     }
-    cmd(["dconf", "write", "/org/x/editor/preferences/editor/scheme", f"'{translations[xed_theme]}'"])
+    set_dconf("/org/x/editor/preferences/editor/scheme", f"{translations[xed_theme]}")
 
 def toggle_variety_mode():
     variety_is_running = cmd(["pgrep", "variety"]) != ""
@@ -92,6 +108,7 @@ if __name__ == "__main__":
     toggle_xfce_setting("xfwm4", "/general/theme")
     toggle_xfce_setting("xsettings", "/Net/ThemeName")
     toggle_xfce_setting("xsettings", "/Net/IconThemeName")
+    toggle_gnome_color_scheme()
     toggle_kvantum_theme()
     toggle_qt_theme()
     toggle_xed_theme()
