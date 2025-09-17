@@ -20,7 +20,8 @@ sudo apt install \
     fzf \
     zoxide \
     tmux \
-    neovim
+    neovim \
+    tldr
 
 sudo wget -O /usr/local/bin/oh-my-posh "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/$oh_my_posh_version/posh-linux-amd64"
 sudo chmod +x /usr/local/bin/oh-my-posh

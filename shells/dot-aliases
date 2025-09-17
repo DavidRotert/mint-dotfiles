@@ -36,3 +36,4 @@ extract() {
 }
 
 alias tmux-temp-session="tmux new \; set-option destroy-unattached on"
+alias tldr="tldr -L en"
