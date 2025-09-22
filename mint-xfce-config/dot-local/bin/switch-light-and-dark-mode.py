@@ -74,6 +74,13 @@ def toggle_gnome_color_scheme():
     else:
         set_dconf("/org/gnome/desktop/interface/color-scheme", "'prefer-dark'")
 
+def toggle_xapps_color_scheme():
+    current_color_scheme = get_dconf("/org/x/apps/portal/color-scheme")
+    if current_color_scheme == "'prefer-dark'":
+        reset_dconf("/org/x/apps/portal/color-scheme")
+    else:
+        set_dconf("/org/x/apps/portal/color-scheme", "'prefer-dark'")
+
 def toggle_kvantum_theme():
     kvantum_settings = os.path.join(os.path.expanduser("~"), ".config/Kvantum/kvantum.kvconfig")
     toggle_setting_in_ini("theme", kvantum_settings)
@@ -109,6 +116,7 @@ if __name__ == "__main__":
     toggle_xfce_setting("xsettings", "/Net/ThemeName")
     toggle_xfce_setting("xsettings", "/Net/IconThemeName")
     toggle_gnome_color_scheme()
+    toggle_xapps_color_scheme()
     toggle_kvantum_theme()
     toggle_qt_theme()
     toggle_xed_theme()
