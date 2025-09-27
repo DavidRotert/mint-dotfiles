@@ -4,7 +4,7 @@ set -euo pipefail
 
 script_dir="$(dirname "$(readlink -f "$0")")"
 
-oh_my_posh_version="v26.23.5"
+oh_my_posh_version="v26.26.0"
 fastfetch_version="2.52.0"
 jetbrains_mono_version="2.304"
 jetbrains_mono_nerdfont_version="v3.4.0"
@@ -23,8 +23,11 @@ sudo apt install \
     neovim \
     tldr
 
-sudo wget -O /usr/local/bin/oh-my-posh "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/$oh_my_posh_version/posh-linux-amd64"
-sudo chmod +x /usr/local/bin/oh-my-posh
+if [ ! -e "/usr/local/bin/oh-my-posh" ]
+then
+    sudo wget -O /usr/local/bin/oh-my-posh "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/$oh_my_posh_version/posh-linux-amd64"
+    sudo chmod +x /usr/local/bin/oh-my-posh
+fi
 
 wget -O /tmp/fastfetch.deb "https://github.com/fastfetch-cli/fastfetch/releases/download/$fastfetch_version/fastfetch-linux-amd64.deb"
 sudo apt install /tmp/fastfetch.deb
