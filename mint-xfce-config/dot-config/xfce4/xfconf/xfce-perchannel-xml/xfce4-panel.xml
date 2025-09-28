@@ -294,16 +294,16 @@
         <value type="string" value="Switch theme mode.desktop"/>
       </property>
       <property name="recent" type="array">
-        <value type="string" value="ApacheDirectoryStudio.desktop"/>
-        <value type="string" value="org.x.editor.desktop"/>
-        <value type="string" value="dbeaver-ce.desktop"/>
-        <value type="string" value="code.desktop"/>
-        <value type="string" value="jetbrains-phpstorm-d85e0ca3-6795-48a3-8017-283b0bdb09d7.desktop"/>
-        <value type="string" value="Zoom.desktop"/>
-        <value type="string" value="gufw.desktop"/>
-        <value type="string" value="WebApp-Teams8714.desktop"/>
-        <value type="string" value="org.gnome.SoundRecorder.desktop"/>
-        <value type="string" value="org.gnome.Cheese.desktop"/>
+        <value type="string" value="xfce-settings-manager.desktop"/>
+        <value type="string" value="light-locker-settings.desktop"/>
+        <value type="string" value="lightdm-settings.desktop"/>
+        <value type="string" value="libreoffice-draw.desktop"/>
+        <value type="string" value="com.github.maoschanz.drawing.desktop"/>
+        <value type="string" value="panel-preferences.desktop"/>
+        <value type="string" value="xfce-ui-settings.desktop"/>
+        <value type="string" value="virt-manager.desktop"/>
+        <value type="string" value="org.gnome.Firmware.desktop"/>
+        <value type="string" value="Yaak.desktop"/>
       </property>
       <property name="menu-opacity" type="int" value="100"/>
       <property name="search-actions" type="int" value="6">

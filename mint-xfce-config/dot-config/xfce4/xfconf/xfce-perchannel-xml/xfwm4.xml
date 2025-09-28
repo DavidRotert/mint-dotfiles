@@ -31,7 +31,7 @@
     <property name="placement_mode" type="string" value="center"/>
     <property name="popup_opacity" type="int" value="100"/>
     <property name="mousewheel_rollup" type="bool" value="false"/>
-    <property name="prevent_focus_stealing" type="bool" value="false"/>
+    <property name="prevent_focus_stealing" type="bool" value="true"/>
     <property name="raise_delay" type="int" value="250"/>
     <property name="raise_on_click" type="bool" value="true"/>
     <property name="raise_on_focus" type="bool" value="false"/>
@@ -84,7 +84,7 @@
     <property name="margin_right" type="empty"/>
     <property name="margin_bottom" type="empty"/>
     <property name="cycle_raise" type="bool" value="false"/>
-    <property name="cycle_minimized" type="bool" value="false"/>
+    <property name="cycle_minimized" type="bool" value="true"/>
     <property name="cycle_preview" type="bool" value="true"/>
     <property name="cycle_tabwin_mode" type="int" value="0"/>
     <property name="frame_border_top" type="int" value="0"/>
