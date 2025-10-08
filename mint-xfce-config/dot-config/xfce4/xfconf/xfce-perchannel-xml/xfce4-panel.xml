@@ -294,16 +294,16 @@
         <value type="string" value="Switch theme mode.desktop"/>
       </property>
       <property name="recent" type="array">
+        <value type="string" value="firefox.desktop"/>
         <value type="string" value="xfce-display-settings.desktop"/>
-        <value type="string" value="xfce4-settings-editor.desktop"/>
-        <value type="string" value="mintdrivers.desktop"/>
         <value type="string" value="xfce4-screenshooter.desktop"/>
         <value type="string" value="code.desktop"/>
+        <value type="string" value="ApacheDirectoryStudio.desktop"/>
         <value type="string" value="jetbrains-phpstorm-d85e0ca3-6795-48a3-8017-283b0bdb09d7.desktop"/>
-        <value type="string" value="firefox.desktop"/>
-        <value type="string" value="com.cisco.secureclient.gui.desktop"/>
-        <value type="string" value="xfce-wmtweaks-settings.desktop"/>
-        <value type="string" value="Switch theme mode.desktop"/>
+        <value type="string" value="org.x.editor.desktop"/>
+        <value type="string" value="dbeaver-ce.desktop"/>
+        <value type="string" value="Zoom.desktop"/>
+        <value type="string" value="WebApp-Mattermost5911.desktop"/>
       </property>
       <property name="menu-opacity" type="int" value="100"/>
       <property name="search-actions" type="int" value="6">
@@ -327,7 +327,7 @@
         </property>
         <property name="action-3" type="empty">
           <property name="name" type="string" value="Im Terminal ausführen"/>
-          <property name="pattern" type="string" value="&gt; "/>
+          <property name="pattern" type="string" value="&gt;"/>
           <property name="command" type="string" value="exo-open --launch TerminalEmulator bash -i -c &apos;%s; echo Press enter ...;read&apos;"/>
           <property name="regex" type="bool" value="false"/>
         </property>
