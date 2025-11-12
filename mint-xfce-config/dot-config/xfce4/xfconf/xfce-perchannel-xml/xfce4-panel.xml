@@ -92,7 +92,7 @@
         <value type="string" value="16996263662.desktop"/>
       </property>
       <property name="miniature-view" type="bool" value="true"/>
-      <property name="numbering" type="bool" value="false"/>
+      <property name="numbering" type="bool" value="true"/>
       <property name="rows" type="uint" value="1"/>
       <property name="workspace-scrolling" type="bool" value="false"/>
     </property>
@@ -294,16 +294,16 @@
         <value type="string" value="Switch theme mode.desktop"/>
       </property>
       <property name="recent" type="array">
+        <value type="string" value="jetbrains-toolbox.desktop"/>
+        <value type="string" value="xfce-ui-settings.desktop"/>
+        <value type="string" value="org.gnome.Firmware.desktop"/>
+        <value type="string" value="com.mitchellh.ghostty.desktop"/>
+        <value type="string" value="com.cisco.secureclient.gui.desktop"/>
         <value type="string" value="firefox.desktop"/>
-        <value type="string" value="xfce-display-settings.desktop"/>
-        <value type="string" value="xfce4-screenshooter.desktop"/>
-        <value type="string" value="code.desktop"/>
-        <value type="string" value="ApacheDirectoryStudio.desktop"/>
-        <value type="string" value="jetbrains-phpstorm-d85e0ca3-6795-48a3-8017-283b0bdb09d7.desktop"/>
-        <value type="string" value="org.x.editor.desktop"/>
-        <value type="string" value="dbeaver-ce.desktop"/>
         <value type="string" value="Zoom.desktop"/>
-        <value type="string" value="WebApp-Mattermost5911.desktop"/>
+        <value type="string" value="code.desktop"/>
+        <value type="string" value="xfce4-screenshooter.desktop"/>
+        <value type="string" value="chromium-browser.desktop"/>
       </property>
       <property name="menu-opacity" type="int" value="100"/>
       <property name="search-actions" type="int" value="6">

@@ -20,6 +20,7 @@
 ; (gtk_accel_path "<Actions>/ThunarActionManager/open" "<Primary>o")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/sort-ascending" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/toggle-split-view" "F3")
+; (gtk_accel_path "<Actions>/ThunarBookmarks/cf2729e5f0cab5fafa6b9b9ff2a17dc7" "")
 ; (gtk_accel_path "<Actions>/ThunarActionManager/copy-2" "<Primary>Insert")
 ; (gtk_accel_path "<Actions>/ThunarBookmarks/12b25693caad2aeeb5f57aa110da278e" "")
 ; (gtk_accel_path "<Actions>/ThunarActionManager/trash-delete" "Delete")

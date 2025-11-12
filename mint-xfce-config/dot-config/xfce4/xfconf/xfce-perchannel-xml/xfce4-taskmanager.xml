@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-taskmanager" version="1.0">
+  <property name="window-maximized" type="bool" value="false"/>
+  <property name="window-width" type="int" value="776"/>
+  <property name="window-height" type="int" value="505"/>
+  <property name="columns" type="empty">
+    <property name="sort-type" type="uint" value="1"/>
+    <property name="sort-id" type="uint" value="5"/>
+    <property name="positions" type="string" value="2;0;3;4;5;6;1;7;8;"/>
+    <property name="column-uid" type="bool" value="true"/>
+    <property name="column-ppid" type="bool" value="false"/>
+    <property name="column-state" type="bool" value="false"/>
+    <property name="column-vsz" type="bool" value="false"/>
+    <property name="column-priority" type="bool" value="false"/>
+  </property>
+  <property name="interface" type="empty">
+    <property name="show-all-processes" type="bool" value="true"/>
+    <property name="full-command-line" type="bool" value="true"/>
+  </property>
+</channel>

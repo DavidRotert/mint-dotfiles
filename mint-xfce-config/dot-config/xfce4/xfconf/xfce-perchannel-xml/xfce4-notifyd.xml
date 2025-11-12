@@ -57,7 +57,7 @@
     <property name="log-only-today" type="bool" value="true"/>
   </property>
   <property name="log-max-size-enabled" type="bool" value="true"/>
-  <property name="show-notifications-on" type="string" value="primary-monitor"/>
+  <property name="show-notifications-on" type="string" value="active-monitor"/>
   <property name="log-level" type="string" value="always"/>
   <property name="log-level-apps" type="string" value="all"/>
   <property name="date-time-custom-format" type="string" value="%a %H:%M:%S"/>
