@@ -33,11 +33,11 @@ extract() {
     fi
 }
 
-alias tmux_temp_session="tmux new \; set-option destroy-unattached on"
+alias tmux-temp-session="tmux new \; set-option destroy-unattached on"
 alias tldr="tldr -L en"
 
-alias f_unique_value_count="sort | uniq --count"
-alias f_unique_values="sort --unique"
-alias f_upper="tr 'a-z' 'A-Z'"
-alias f_lower="tr 'A-Z' 'a-z'"
-alias f_case_invert="tr 'a-zA-Z' 'A-Za-z'"
+alias unique-value-count="sort | uniq --count"
+alias unique-values="sort --unique"
+alias upper="tr 'a-z' 'A-Z'"
+alias lower="tr 'A-Z' 'a-z'"
+alias case-invert="tr 'a-zA-Z' 'A-Za-z'"
