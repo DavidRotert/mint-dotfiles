@@ -43,7 +43,7 @@ setopt hist_verify # show command with history expansion to user before running 
 setopt share_history # share command history data
 setopt inc_append_history
 
-clear-history() {
+clear_zsh_history() {
     echo "" > $HISTFILE
     history -p
 }
@@ -96,8 +96,8 @@ fi
 if command -v zoxide &>/dev/null
 then
     eval "$(zoxide init zsh)"
-    \builtin alias cd=z
-    \builtin alias cdi=zi
+    alias cd=z
+    alias cdi=zi
 fi
 
 source_if_exists "$HOME/.zshrc_custom"
