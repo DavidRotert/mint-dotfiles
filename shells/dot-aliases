@@ -43,10 +43,10 @@ alias lower="tr 'A-Z' 'a-z'"
 alias case-invert="tr 'a-zA-Z' 'A-Za-z'"
 
 folder_search() {
-    find "$HOME" -type d 2>/dev/null \
+    find "$1" -type d 2>/dev/null \
         | fzf
 }
 
 cdi() {
-    \cd "$(folder_search)"
+    \cd "$(folder_search '/')"
 }
