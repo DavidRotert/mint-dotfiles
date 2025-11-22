@@ -18,7 +18,6 @@ sudo apt install \
     zsh-syntax-highlighting \
     zsh-autosuggestions \
     fzf \
-    zoxide \
     tmux \
     neovim \
     tldr

@@ -88,13 +88,6 @@ then
     eval "$(oh-my-posh init zsh --config "$HOME/.config/oh-my-posh.yml")"
 fi
 
-if command -v zoxide &>/dev/null
-then
-    eval "$(zoxide init zsh)"
-    alias cd=z
-    alias cdi=zi
-fi
-
 source_if_exists "$HOME/.zshrc_custom"
 
 source_if_exists "$HOME/.aliases"
