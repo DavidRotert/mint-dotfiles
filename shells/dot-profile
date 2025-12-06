@@ -12,26 +12,12 @@ source_if_exists() {
     [ -f "$1" ] && . "$1"
 }
 
+source_if_exists "$HOME/.environment"
+source_if_exists "$HOME/.environment_custom"
+
 # if running bash
 if [ -n "$BASH_VERSION" ]
 then
     # include .bashrc if it exists
     source_if_exists "$HOME/.bashrc"
 fi
-
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ]
-then
-    PATH="$HOME/bin:$PATH"
-fi
-
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ]
-then
-    PATH="$HOME/.local/bin:$PATH"
-fi
-
-source_if_exists "$HOME/.environment"
-source_if_exists "$HOME/.environment_custom"
-source_if_exists "$HOME/.aliases"
-source_if_exists "$HOME/.aliases_custom"

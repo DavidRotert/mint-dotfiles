@@ -35,6 +35,7 @@ extract() {
 
 alias tmux-temp-session="tmux new \; set-option destroy-unattached on"
 alias tldr="tldr -L en"
+alias rm="gio trash"
 
 alias unique-value-count="sort | uniq --count"
 alias unique-values="sort --unique"
