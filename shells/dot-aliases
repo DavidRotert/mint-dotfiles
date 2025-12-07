@@ -46,7 +46,7 @@ alias average="awk '{ total += \$1; count++ } END { print total/count }'"
 
 folder_search() {
     find "$1" -type d -maxdepth 7 2>/dev/null \
-        | fzf
+        | fzf --exact
 }
 
 cdi() {
