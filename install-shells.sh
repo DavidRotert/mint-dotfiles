@@ -20,6 +20,7 @@ sudo apt install \
     fzf \
     tmux \
     neovim \
+    micro \
     tldr
 
 if [ ! -e "/usr/local/bin/oh-my-posh" ]
