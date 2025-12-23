@@ -19,9 +19,10 @@ sudo apt install \
     zsh-autosuggestions \
     fzf \
     tmux \
-    neovim \
     micro \
     tldr
+
+sudo update-alternatives --set editor /usr/bin/micro
 
 if [ ! -e "/usr/local/bin/oh-my-posh" ]
 then
