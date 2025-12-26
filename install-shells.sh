@@ -5,7 +5,7 @@ set -euo pipefail
 script_dir="$(dirname "$(readlink -f "$0")")"
 
 oh_my_posh_version="v26.26.0"
-fastfetch_version="2.52.0"
+fastfetch_version="2.56.1"
 jetbrains_mono_version="2.304"
 jetbrains_mono_nerdfont_version="v3.4.0"
 
@@ -19,10 +19,7 @@ sudo apt install \
     zsh-autosuggestions \
     fzf \
     tmux \
-    micro \
     tldr
-
-sudo update-alternatives --set editor /usr/bin/micro
 
 if [ ! -e "/usr/local/bin/oh-my-posh" ]
 then
