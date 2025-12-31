@@ -19,10 +19,9 @@ sudo apt install \
     zsh-autosuggestions \
     fzf \
     tmux \
-    micro \
     tldr
 
-sudo update-alternatives --set editor /usr/bin/micro
+sudo update-alternatives --set editor /usr/bin/nano || true
 
 if [ ! -e "/usr/local/bin/oh-my-posh" ]
 then
