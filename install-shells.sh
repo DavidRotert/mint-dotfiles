@@ -23,6 +23,8 @@ sudo apt install \
 
 sudo update-alternatives --set editor /usr/bin/nano || true
 
+sudo cp "$script_dir/other-configs/nanorc" "/etc/nanorc"
+
 if [ ! -e "/usr/local/bin/oh-my-posh" ]
 then
     sudo wget -O /usr/local/bin/oh-my-posh "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/$oh_my_posh_version/posh-linux-amd64"

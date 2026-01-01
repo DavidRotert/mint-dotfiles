@@ -330,11 +330,15 @@ include "/usr/share/nano/*.nanorc"
 #bind ^Z undo main
 #bind ^Y redo main
 
+# === Custom configurations ===
+
+# Make life easier with linenumbers, selection color and zap mode:
 set linenumbers
 set numbercolor white
-set selectedcolor ,sea
+set selectedcolor ,blue
 set zap
 
+# Set modern keybindings (like in Nano 8.0):
 bind ^Q exit all
 bind ^X cut main
 bind ^C copy main
