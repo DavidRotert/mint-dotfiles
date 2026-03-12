@@ -106,7 +106,9 @@ esac
 
 source_if_exists /usr/share/doc/fzf/examples/key-bindings.bash
 
+### Custom bashrc
 source_if_exists "$HOME/.bashrc_custom"
 
+### Stup aliases
 source_if_exists "$HOME/.aliases"
 source_if_exists "$HOME/.aliases_custom"

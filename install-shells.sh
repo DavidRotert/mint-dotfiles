@@ -19,7 +19,7 @@ sudo apt install \
     zsh-autosuggestions \
     fzf \
     tmux \
-    tldr
+    tealdeer
 
 sudo update-alternatives --set editor /usr/bin/nano || true
 
