@@ -9,11 +9,11 @@
   <property name="do-fadeout" type="empty"/>
   <property name="applications" type="empty">
     <property name="known_applications" type="array">
+      <value type="string" value="Aktualisierungsverwaltung"/>
       <value type="string" value="Bitwarden"/>
       <value type="string" value="blueman"/>
       <value type="string" value="brave-browser"/>
       <value type="string" value="chromium-browser"/>
-      <value type="string" value="cloud-drive-auto-updater"/>
       <value type="string" value="cloud-drive-ui"/>
       <value type="string" value="com.cisco.anyconnect.gui"/>
       <value type="string" value="com.cisco.secureclient.gui"/>
@@ -32,6 +32,7 @@
       <value type="string" value="Portmaster"/>
       <value type="string" value="thunar-volman"/>
       <value type="string" value="Thunderbird"/>
+      <value type="string" value="Transmission"/>
       <value type="string" value="uGet"/>
       <value type="string" value="Variety"/>
       <value type="string" value="Xfce volume control"/>
@@ -59,7 +60,7 @@
     <property name="log-only-today" type="bool" value="true"/>
   </property>
   <property name="log-max-size-enabled" type="bool" value="true"/>
-  <property name="show-notifications-on" type="string" value="primary-monitor"/>
+  <property name="show-notifications-on" type="string" value="active-monitor"/>
   <property name="log-level" type="string" value="always"/>
   <property name="log-level-apps" type="string" value="all"/>
   <property name="date-time-custom-format" type="string" value="%a %H:%M:%S"/>
