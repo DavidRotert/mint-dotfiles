@@ -19,6 +19,7 @@ sudo apt install \
     zsh-autosuggestions \
     fzf \
     tmux \
+    xclip \
     tealdeer
 
 sudo update-alternatives --set editor /usr/bin/nano || true
